@@ -1,0 +1,524 @@
+{
+  "ver": "2.1.8",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "904d9a19-1b6e-4fad-a1bb-bcad4b212318",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "10172": {
+      "importer": "gltf-material",
+      "uuid": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@10172",
+      "displayName": "",
+      "id": "10172",
+      "name": "M_Gun.material",
+      "userData": {
+        "gltfIndex": 4
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "30732": {
+      "importer": "gltf-skeleton",
+      "uuid": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@30732",
+      "displayName": "",
+      "id": "30732",
+      "name": "UnnamedSkeleton-0.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 67
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "84928": {
+      "importer": "gltf-animation",
+      "uuid": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@84928",
+      "displayName": "",
+      "id": "84928",
+      "name": "Hit_React_Crouch.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.9666666388511658
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "1efe6": {
+      "importer": "gltf-mesh",
+      "uuid": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@1efe6",
+      "displayName": "",
+      "id": "1efe6",
+      "name": "SM_MainHero_Material0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a11d0": {
+      "importer": "gltf-mesh",
+      "uuid": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@a11d0",
+      "displayName": "",
+      "id": "a11d0",
+      "name": "SM_Gun03.mesh",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "afbf0": {
+      "importer": "gltf-mesh",
+      "uuid": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@afbf0",
+      "displayName": "",
+      "id": "afbf0",
+      "name": "SM_Gun04.mesh",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f1394": {
+      "importer": "gltf-skeleton",
+      "uuid": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@f1394",
+      "displayName": "",
+      "id": "f1394",
+      "name": "UnnamedSkeleton-1.skeleton",
+      "userData": {
+        "gltfIndex": 1,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "75ee4": {
+      "importer": "gltf-skeleton",
+      "uuid": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@75ee4",
+      "displayName": "",
+      "id": "75ee4",
+      "name": "UnnamedSkeleton-2.skeleton",
+      "userData": {
+        "gltfIndex": 2,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "52f10": {
+      "importer": "gltf-embeded-image",
+      "uuid": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@52f10",
+      "displayName": "",
+      "id": "52f10",
+      "name": "T_Hair_thin_A.image",
+      "userData": {
+        "gltfIndex": 4
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4ddda": {
+      "importer": "gltf-embeded-image",
+      "uuid": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@4ddda",
+      "displayName": "",
+      "id": "4ddda",
+      "name": "T_Hair_Tthin_A.image",
+      "userData": {
+        "gltfIndex": 5
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "02540": {
+      "importer": "texture",
+      "uuid": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@02540",
+      "displayName": "",
+      "id": "02540",
+      "name": "T_Hero_Body_BC.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/Characters/Ms.Amoy/Cocos/Materials/T_Hero_Body_BC.png"
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "1dd84": {
+      "importer": "texture",
+      "uuid": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@1dd84",
+      "displayName": "",
+      "id": "1dd84",
+      "name": "T_Hero_Body_N.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/Characters/Ms.Amoy/Cocos/Materials/T_Hero_Body_N.png"
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f7400": {
+      "importer": "texture",
+      "uuid": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@f7400",
+      "displayName": "",
+      "id": "f7400",
+      "name": "T_Hero_Head_BC.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/Characters/Ms.Amoy/Cocos/Materials/T_Hero_Head_BC.png"
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "97a6e": {
+      "importer": "texture",
+      "uuid": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@97a6e",
+      "displayName": "",
+      "id": "97a6e",
+      "name": "T_Hero_Head_N.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/Characters/Ms.Amoy/Cocos/Materials/T_Hero_Head_N.png"
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "9ad31": {
+      "importer": "texture",
+      "uuid": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@9ad31",
+      "displayName": "",
+      "id": "9ad31",
+      "name": "T_Hair_thin_A.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@52f10"
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ed98d": {
+      "importer": "texture",
+      "uuid": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@ed98d",
+      "displayName": "",
+      "id": "ed98d",
+      "name": "T_Hair_Tthin_A.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@4ddda"
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "55f43": {
+      "importer": "texture",
+      "uuid": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@55f43",
+      "displayName": "",
+      "id": "55f43",
+      "name": "T_Gun_C.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/Characters/Ms.Amoy/Cocos/Materials/T_gun03_BC.png"
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e6ceb": {
+      "importer": "gltf-material",
+      "uuid": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@e6ceb",
+      "displayName": "",
+      "id": "e6ceb",
+      "name": "M_Body.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a5b87": {
+      "importer": "gltf-material",
+      "uuid": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@a5b87",
+      "displayName": "",
+      "id": "a5b87",
+      "name": "M_Head.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "62f3e": {
+      "importer": "gltf-material",
+      "uuid": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@62f3e",
+      "displayName": "",
+      "id": "62f3e",
+      "name": "M_Hair_B.material",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "26dfd": {
+      "importer": "gltf-material",
+      "uuid": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@26dfd",
+      "displayName": "",
+      "id": "26dfd",
+      "name": "M_Hair_A.material",
+      "userData": {
+        "gltfIndex": 3
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c4c89": {
+      "importer": "gltf-material",
+      "uuid": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@c4c89",
+      "displayName": "",
+      "id": "c4c89",
+      "name": "gun03.material",
+      "userData": {
+        "gltfIndex": 5
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "9483e": {
+      "importer": "gltf-scene",
+      "uuid": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@9483e",
+      "displayName": "",
+      "id": "9483e",
+      "name": "MainHero@Hit_React_Crouch.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "T_Hero_Body_BC",
+        "uri": "db://assets/Characters/Ms.Amoy/Cocos/Materials/T_Hero_Body_BC.png"
+      },
+      {
+        "name": "T_Hero_Body_N",
+        "uri": "db://assets/Characters/Ms.Amoy/Cocos/Materials/T_Hero_Body_N.png"
+      },
+      {
+        "name": "T_Hero_Head_BC",
+        "uri": "db://assets/Characters/Ms.Amoy/Cocos/Materials/T_Hero_Head_BC.png"
+      },
+      {
+        "name": "T_Hero_Head_N",
+        "uri": "db://assets/Characters/Ms.Amoy/Cocos/Materials/T_Hero_Head_N.png"
+      },
+      {
+        "name": "T_Hair_thin_A",
+        "uri": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@52f10"
+      },
+      {
+        "name": "T_Hair_Tthin_A",
+        "uri": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@4ddda"
+      },
+      {
+        "name": "T_Gun_C",
+        "uri": "db://assets/Characters/Ms.Amoy/Cocos/Materials/T_gun03_BC.png"
+      }
+    ],
+    "legacyFbxImporter": false,
+    "animationImportSettings": [
+      {
+        "name": "Take 001",
+        "duration": 0.9666666388511658,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Hit_React_Crouch",
+            "from": 0,
+            "to": 0.9666666388511658,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "904d9a19-1b6e-4fad-a1bb-bcad4b212318@9483e",
+    "assetFinder": {
+      "meshes": [
+        "904d9a19-1b6e-4fad-a1bb-bcad4b212318@1efe6",
+        "904d9a19-1b6e-4fad-a1bb-bcad4b212318@a11d0",
+        "904d9a19-1b6e-4fad-a1bb-bcad4b212318@afbf0"
+      ],
+      "skeletons": [
+        "904d9a19-1b6e-4fad-a1bb-bcad4b212318@30732",
+        "904d9a19-1b6e-4fad-a1bb-bcad4b212318@f1394",
+        "904d9a19-1b6e-4fad-a1bb-bcad4b212318@75ee4"
+      ],
+      "textures": [
+        "904d9a19-1b6e-4fad-a1bb-bcad4b212318@02540",
+        "904d9a19-1b6e-4fad-a1bb-bcad4b212318@1dd84",
+        "904d9a19-1b6e-4fad-a1bb-bcad4b212318@f7400",
+        "904d9a19-1b6e-4fad-a1bb-bcad4b212318@97a6e",
+        "904d9a19-1b6e-4fad-a1bb-bcad4b212318@9ad31",
+        "904d9a19-1b6e-4fad-a1bb-bcad4b212318@ed98d",
+        "904d9a19-1b6e-4fad-a1bb-bcad4b212318@55f43"
+      ],
+      "materials": [
+        "904d9a19-1b6e-4fad-a1bb-bcad4b212318@e6ceb",
+        "904d9a19-1b6e-4fad-a1bb-bcad4b212318@a5b87",
+        "904d9a19-1b6e-4fad-a1bb-bcad4b212318@62f3e",
+        "904d9a19-1b6e-4fad-a1bb-bcad4b212318@26dfd",
+        "904d9a19-1b6e-4fad-a1bb-bcad4b212318@10172",
+        "904d9a19-1b6e-4fad-a1bb-bcad4b212318@c4c89"
+      ],
+      "scenes": [
+        "904d9a19-1b6e-4fad-a1bb-bcad4b212318@9483e"
+      ]
+    }
+  }
+}

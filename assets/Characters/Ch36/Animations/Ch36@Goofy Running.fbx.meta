@@ -1,0 +1,79 @@
+{
+  "ver": "2.1.8",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "65234a75-4d38-464b-ba18-cd1cabdcbe6a",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "41704": {
+      "importer": "gltf-scene",
+      "uuid": "65234a75-4d38-464b-ba18-cd1cabdcbe6a@41704",
+      "displayName": "",
+      "id": "41704",
+      "name": "Ch36@Goofy Running.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6a67b": {
+      "importer": "gltf-animation",
+      "uuid": "65234a75-4d38-464b-ba18-cd1cabdcbe6a@6a67b",
+      "displayName": "",
+      "id": "6a67b",
+      "name": "Goofy Running.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.6333333253860474
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "animationImportSettings": [
+      {
+        "name": "mixamo.com",
+        "duration": 0.6333333253860474,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Goofy Running",
+            "from": 0,
+            "to": 0.6333333253860474,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "65234a75-4d38-464b-ba18-cd1cabdcbe6a@41704",
+    "assetFinder": {
+      "meshes": [],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "65234a75-4d38-464b-ba18-cd1cabdcbe6a@41704"
+      ]
+    }
+  }
+}

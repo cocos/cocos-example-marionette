@@ -1,0 +1,79 @@
+{
+  "ver": "2.1.8",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "85ad4cc6-44b7-46ee-bea1-de922b00fb30",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "81217": {
+      "importer": "gltf-scene",
+      "uuid": "85ad4cc6-44b7-46ee-bea1-de922b00fb30@81217",
+      "displayName": "",
+      "id": "81217",
+      "name": "Ch36@Orc Walk.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0afcb": {
+      "importer": "gltf-animation",
+      "uuid": "85ad4cc6-44b7-46ee-bea1-de922b00fb30@0afcb",
+      "displayName": "",
+      "id": "0afcb",
+      "name": "Orc Walk.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.2000000476837158
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "animationImportSettings": [
+      {
+        "name": "mixamo.com",
+        "duration": 1.2000000476837158,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Orc Walk",
+            "from": 0,
+            "to": 1.2000000476837158,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "85ad4cc6-44b7-46ee-bea1-de922b00fb30@81217",
+    "assetFinder": {
+      "meshes": [],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "85ad4cc6-44b7-46ee-bea1-de922b00fb30@81217"
+      ]
+    }
+  }
+}
