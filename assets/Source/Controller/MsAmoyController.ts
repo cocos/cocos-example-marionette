@@ -180,6 +180,16 @@ export class MsAmoyController extends Component {
     }
 
     private _onTouchMove (eventTouch: EventTouch) {
+        if (eventTouch.getTouches().length === 1) {
+            const dx = eventTouch.getUIDelta().x;
+            if (dx) {
+                const angle = -dx * this.mouseTurnSpeed;
+                this.node.rotate(
+                    math.Quat.rotateY(new math.Quat(), math.Quat.IDENTITY, math.toRadian(angle)),
+                    Node.NodeSpace.WORLD,
+                );
+            }
+        }
     }
 
     private _onDamaged(damage: Damage) {
