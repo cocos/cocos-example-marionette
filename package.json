@@ -1,5 +1,8 @@
 {
   "name": "NewProject",
   "type": "3d",
-  "uuid": "174daac0-57f0-4631-aa23-ffe167454a6e"
+  "uuid": "174daac0-57f0-4631-aa23-ffe167454a6e",
+  "creator": {
+    "version": "3.4.0"
+  }
 }

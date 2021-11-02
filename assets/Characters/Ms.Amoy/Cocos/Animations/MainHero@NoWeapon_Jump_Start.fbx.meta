@@ -1,5 +1,5 @@
 {
-  "ver": "2.1.8",
+  "ver": "2.1.9",
   "importer": "fbx",
   "imported": true,
   "uuid": "ff000511-60f1-4247-9819-50b2fa873fdf",
@@ -53,7 +53,7 @@
         "sample": 30,
         "span": {
           "from": 0,
-          "to": 1.7999999523162842
+          "to": 0.46666666865348816
         },
         "events": []
       },
@@ -513,13 +513,13 @@
     "animationImportSettings": [
       {
         "name": "Take 001",
-        "duration": 1.7999999523162842,
+        "duration": 0.46666666865348816,
         "fps": 30,
         "splits": [
           {
             "name": "NoWeapon_Jump_Start",
             "from": 0,
-            "to": 1.7999999523162842,
+            "to": 0.46666666865348816,
             "wrapMode": 2
           }
         ]
@@ -556,6 +556,9 @@
       "scenes": [
         "ff000511-60f1-4247-9819-50b2fa873fdf@b1230"
       ]
+    },
+    "fbx": {
+      "preferLocalTimeSpan": false
     }
   }
 }

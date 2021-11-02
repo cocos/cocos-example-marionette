@@ -1,70 +1,72 @@
 
-# DEMO 项目：阿摩依小姐（Ms.Amoy）
+# DEMO Project: Ms. Amoy
 
-本项目是为了演示 Cocos Creator Marionette 动画系统的使用。
+[中文](./README.zh-Hans-CN.md)
 
-## 介绍
+This project is to demonstrate the use of Cocos Creator Marionette animation system.
 
-整个项目仅有一个主场景，位于 `assets/Scenes/Main.scene`。
+## Introduction
 
-游戏启动后，玩家以第一视角操控角色“阿摩依小姐”（以下称为主角）进行简单的战斗。
+The project has only one main scene, located in `assets/Scenes/Main.scene`.
 
-### 总则
+Once the game starts, the player can control the heroine "Ms. Amoy" (hereafter called the heroine) in a simple battle from the first perspective.
 
-本项目应该关注动作的连贯程度——几乎所有的动作切换都是平滑的。
+### General Rules
 
-### 怪物
+Please focus on the consistency of the action - almost all action switches are smooth.
 
-场景中会生成数个怪物角色，它们的行为如下：
+### Monsters
 
-- 待机，并在待机随机时间后移动至随机地点。
+Several monster characters will be generated in the scene, and they will behave as follows:
 
-- 一旦发现主角接近，会进入战斗模式，追逐主角。
+- Standby and move to a random location after a random amount of time on standby.
 
-  - 与主角距离足够接近并完全面向主角后，将开始攻击。
+- Once they find the heroine approaching, they will enter battle mode and chase the heroine.
 
-  - 与主角距离过远时会重新进入待机状态。
+  - After close enough to the heroine and fully facing the heroine, they will begin to attack.
 
-### 主角
+  - They will re-enter the standby state when they are too far away from the heroine.
 
-主角可由玩家自由操控：
+### Heroine
 
-  - 【有鼠标设备时】通过鼠标右键移动转动人物面向，通过鼠标左键移动转动摄像头角度，通过鼠标滚轮调整摄像机距离。
+The heroine can be freely controlled by the player:
 
-  - 【无鼠标设备时】通过单个触摸点左右移动转动人物面向，通过两个触摸点（近似地）同向移动转动摄像头角度，通过两个触摸点拉近或者拉远调整摄像机距离。
+  - [When using the mouse] Use the right mouse button to turn the direction the heroine is facing, the left mouse button to turn the camera angle, and the mouse wheel to adjust the camera distance.
 
-  - 通过轮盘 ![Image description](./docs/Joystick.png "title")来操纵移动方向。（不改变面向）
+  - [When using the touch screen] Use one touch point to move left and right to turn the direction the heroine is facing, use two touch points (approximately) to move in the same direction to turn the camera angle, and use two touch points to draw closer or farther to adjust the camera distance.
 
-  - 通过按钮 ![Image description](./docs/Attack.png "title")进行攻击。
+  - Use the joystick ![Image description](./docs/Joystick.png "title") to control the direction of movement (without changing the orientation).
 
-  - 通过按钮 ![Image description](./docs/Bullet.png "title")进行换子弹（仅表现，无相关实在逻辑）。
+  - Use the attack button ![Image description](./docs/Attack.png "title") to attack.
 
-  - 通过按钮 ![Image description](./docs/Crouch.png "title")蹲伏或取消蹲伏。
+  - Use the reload button ![Image description](./docs/Bullet.png "title") to reload ammo (presentation only, no real logic).
 
-  - 通过按钮 ![Image description](./docs/Jump.png "title")跳跃。
+  - Use the crouch button ![Image description](./docs/Crouch.png "title") to crouch or uncrouch.
 
-  - 通过按钮 ![Image description](./docs/Aim.png "title")切换瞄准模式或取消瞄准模式。
+  - Use the jump button ![Image description](./docs/Jump.png "title") to jump.
 
-有以下规则需要注意：
+  - Use the aim button ![Image description](./docs/Aim.png "title") to enter or exit aiming mode.
 
-  - 蹲伏和站立模式下都可以进行瞄准和非瞄准。
+There are the following rules to be noted:
 
-  - 蹲伏和战力模式下都可以进行移动，但是移动的动作是不一样的。
+  - Aiming and un-aiming are available in both crouching and standing modes.
 
-  - 切换到普通待机并等候片刻后，会切换至另一个普通待机动作。
+  - Movement is possible in both crouching and standing mode, but the motion is different.
 
-### 战斗系统
+  - After switching to normal standby mode and waiting for a moment, you will switch to another normal standby action.
 
-- 无论是主角还是怪物，攻击都具有方向性和距离限制。怪物在发动攻击动作 0.5 秒（前摇）后，若方向和距离都满足，则造成实际伤害。而主角攻击没有前摇。
+### Combat System
 
-- 无论是主角还是怪物，受到伤害后会播放相应动作。
+- Both the heroine and monsters have directional and distance restrictions on their attacks. Monsters deal actual damage if both direction and distance are met after 0.5 seconds (foreswing) of launching an attack action. The heroine attack has no foreswing.
 
-- 发出攻击后，伤害的判定不会因为切换了其它动作（比如受伤害）被打断。
+- Both the heroine and monsters will play the corresponding animation after taking damage.
 
-## 已知问题
+- After launching an attack, the damage determination will not be interrupted by switching to another action (such as taking damage).
 
-- 无论是怪物还是主角，受击时可以进行不真实的移动（滑步）。
+## Known Issues
 
-## 什么是阿摩依？
+- Both monsters and the heroine may move unrealistically (slide) when they are hit.
 
-阿摩依音译自 Amoy，而 Amoy 是中国厦门市的英译。
+## What is Amoy?
+
+Amoy is the old English name for the Chinese city of Xiamen.

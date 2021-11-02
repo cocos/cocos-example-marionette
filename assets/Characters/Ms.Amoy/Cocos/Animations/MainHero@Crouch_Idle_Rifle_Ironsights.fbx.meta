@@ -1,5 +1,5 @@
 {
-  "ver": "2.1.8",
+  "ver": "2.1.9",
   "importer": "fbx",
   "imported": true,
   "uuid": "56dcb5f1-a1f4-4f2e-b109-57c9179b56c8",
@@ -87,7 +87,7 @@
         "sample": 30,
         "span": {
           "from": 0,
-          "to": 6.333333492279053
+          "to": 6.666666507720947
         },
         "events": []
       },
@@ -513,13 +513,13 @@
     "animationImportSettings": [
       {
         "name": "Take 001",
-        "duration": 6.333333492279053,
+        "duration": 6.666666507720947,
         "fps": 30,
         "splits": [
           {
             "name": "Crouch_Idle_Rifle_Ironsights",
             "from": 0,
-            "to": 6.333333492279053,
+            "to": 6.666666507720947,
             "wrapMode": 2
           }
         ]
@@ -556,6 +556,9 @@
       "scenes": [
         "56dcb5f1-a1f4-4f2e-b109-57c9179b56c8@41ba4"
       ]
+    },
+    "fbx": {
+      "preferLocalTimeSpan": false
     }
   }
 }

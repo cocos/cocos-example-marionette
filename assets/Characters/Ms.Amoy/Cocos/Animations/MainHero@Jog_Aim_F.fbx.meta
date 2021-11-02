@@ -1,5 +1,5 @@
 {
-  "ver": "2.1.8",
+  "ver": "2.1.9",
   "importer": "fbx",
   "imported": true,
   "uuid": "1c5e9a98-2c2f-4a67-85e1-087c524a75f5",
@@ -556,6 +556,9 @@
       "scenes": [
         "1c5e9a98-2c2f-4a67-85e1-087c524a75f5@08bfa"
       ]
+    },
+    "fbx": {
+      "preferLocalTimeSpan": false
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "ver": "2.1.8",
+  "ver": "2.1.9",
   "importer": "fbx",
   "imported": true,
   "uuid": "666ab3a6-9c22-450f-b850-30862230c234",
@@ -87,7 +87,7 @@
         "sample": 30,
         "span": {
           "from": 0,
-          "to": 1.2999999523162842
+          "to": 1.2666666507720947
         },
         "events": []
       },
@@ -513,13 +513,13 @@
     "animationImportSettings": [
       {
         "name": "Take 001",
-        "duration": 1.2999999523162842,
+        "duration": 1.2666666507720947,
         "fps": 30,
         "splits": [
           {
             "name": "Fire_Shotgun_Hip",
             "from": 0,
-            "to": 1.2999999523162842,
+            "to": 1.2666666507720947,
             "wrapMode": 2
           }
         ]
@@ -556,6 +556,9 @@
       "scenes": [
         "666ab3a6-9c22-450f-b850-30862230c234@0a58f"
       ]
+    },
+    "fbx": {
+      "preferLocalTimeSpan": false
     }
   }
 }

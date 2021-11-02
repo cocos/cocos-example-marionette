@@ -423,7 +423,7 @@
     "_priority": 1073741824,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 320,
+    "_orthoHeight": 325.9762308998302,
     "_near": 1,
     "_far": 2000,
     "_color": {
@@ -3895,6 +3895,7 @@
     "_fogEnd": 300,
     "_fogAtten": 5,
     "_fogTop": 1.5,
-    "_fogRange": 1.2
+    "_fogRange": 1.2,
+    "_accurate": false
   }
 ]

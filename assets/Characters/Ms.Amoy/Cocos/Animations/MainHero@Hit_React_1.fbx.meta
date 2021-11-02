@@ -1,5 +1,5 @@
 {
-  "ver": "2.1.8",
+  "ver": "2.1.9",
   "importer": "fbx",
   "imported": true,
   "uuid": "e0b6998d-b5b9-4fbb-9f20-f33a38998c4c",
@@ -87,7 +87,7 @@
         "sample": 30,
         "span": {
           "from": 0,
-          "to": 0.9666666388511658
+          "to": 0.9333333373069763
         },
         "events": []
       },
@@ -513,13 +513,13 @@
     "animationImportSettings": [
       {
         "name": "Take 001",
-        "duration": 0.9666666388511658,
+        "duration": 0.9333333373069763,
         "fps": 30,
         "splits": [
           {
             "name": "Hit_React_1",
             "from": 0,
-            "to": 0.9666666388511658,
+            "to": 0.9333333373069763,
             "wrapMode": 2
           }
         ]
@@ -556,6 +556,9 @@
       "scenes": [
         "e0b6998d-b5b9-4fbb-9f20-f33a38998c4c@5ce40"
       ]
+    },
+    "fbx": {
+      "preferLocalTimeSpan": false
     }
   }
 }
