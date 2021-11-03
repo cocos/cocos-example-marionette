@@ -8,7 +8,6 @@ import { useMouseInput } from '../Utils/Env';
 import { getForward } from '../Utils/NodeUtils';
 import { CharacterStatus } from './CharacterStatus';
 const { ccclass, property } = _decorator;
-import {} from 'cc/userland/macro';
 import { DamageKey, DAMAGE_TABLE } from '../GamePlay/Damage/DamageTable';
 import { waitFor } from '../Utils/Misc';
 
