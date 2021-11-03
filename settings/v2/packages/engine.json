@@ -133,10 +133,5 @@
     "ENABLE_ANTIALIAS_FXAA": false,
     "CLEANUP_IMAGE_CACHE": true
   },
-  "macroCustom": [
-    {
-      "key": "123",
-      "value": false
-    }
-  ]
+  "macroCustom": []
 }
