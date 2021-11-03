@@ -179,7 +179,7 @@ export class MonsterAI extends cc.Component {
             axis: rotateAxis,
         } = this._getAngleAxisToTarget(this._dest);
 
-        if (cc.math.approx(currentAngle, 0.0, 1e-5) || cc.math.approx(currentAngle, Math.PI, 1e-5)) {
+        if (this._isOrientingToTarget(currentAngle)) {
             if (this._targetEnemy) {
                 this._startChasing();
             } else {
@@ -214,7 +214,7 @@ export class MonsterAI extends cc.Component {
     private _onStateChasing(deltaTime: number) {
         const targetEnemy = this._targetEnemy!;
         const { angle } = this._getAngleAxisToTarget(this._getAmoyPosition(targetEnemy));
-        if (!cc.math.approx(angle, 0.0, 1e-5)) {
+        if (!this._isOrientingToTarget(angle)) {
             this._state = AIState.ROTATING;
             return deltaTime;
         }
@@ -324,6 +324,10 @@ export class MonsterAI extends cc.Component {
 
     private _onDamaged(damage: Damage) {
         this._animationController.setValue('Hit', true);
+    }
+
+    private _isOrientingToTarget(angle: number) {
+        return cc.math.approx(angle, 0.0, 1e-5);
     }
 
     private _getAmoyPosition(target: MsAmoyController) {
