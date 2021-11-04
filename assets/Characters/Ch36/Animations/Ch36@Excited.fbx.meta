@@ -1,0 +1,79 @@
+{
+  "ver": "2.1.9",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "1eed1550-d530-4d8d-b1a1-2b7bf13cbf68",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "44431": {
+      "importer": "gltf-scene",
+      "uuid": "1eed1550-d530-4d8d-b1a1-2b7bf13cbf68@44431",
+      "displayName": "",
+      "id": "44431",
+      "name": "Ch36@Excited.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2bd43": {
+      "importer": "gltf-animation",
+      "uuid": "1eed1550-d530-4d8d-b1a1-2b7bf13cbf68@2bd43",
+      "displayName": "",
+      "id": "2bd43",
+      "name": "Excited.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 6.566666603088379
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "animationImportSettings": [
+      {
+        "name": "mixamo.com",
+        "duration": 6.566666603088379,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Excited",
+            "from": 0,
+            "to": 6.566666603088379,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "1eed1550-d530-4d8d-b1a1-2b7bf13cbf68@44431",
+    "assetFinder": {
+      "meshes": [],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "1eed1550-d530-4d8d-b1a1-2b7bf13cbf68@44431"
+      ]
+    }
+  }
+}

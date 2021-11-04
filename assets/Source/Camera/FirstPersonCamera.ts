@@ -314,7 +314,7 @@ export class FirstPersonCamera extends cc.Component {
         const old = cc.math.Vec3.angle(up, save);
         const news = cc.math.Vec3.angle(up, this._currentDir);
         if (!cc.math.approx(old, news, 1e-5)) {
-            debugger;
+            // debugger;
         }
     }
 

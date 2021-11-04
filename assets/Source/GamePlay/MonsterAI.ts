@@ -129,6 +129,8 @@ export class MonsterAI extends cc.Component {
 
     private _attackFinished = true;
 
+    private _isProvocativelyAttack = false;
+
     private _onStateNone () {
         this._startIdle();
     }
@@ -194,7 +196,7 @@ export class MonsterAI extends cc.Component {
         }
 
         if (!onlyYRotation(this.node)) {
-            debugger;
+            //debugger;
         }
 
         const rotateSpeed = cc.math.toRadian(180.0);
@@ -205,7 +207,7 @@ export class MonsterAI extends cc.Component {
         this.node.setWorldRotation(rotation);
 
         if (!onlyYRotation(this.node)) {
-            debugger;
+            //debugger;
         }
         
         return deltaTime - time;
@@ -304,20 +306,28 @@ export class MonsterAI extends cc.Component {
 
     private _startAttack() {
         this._state = AIState.ATTACKING;
-        this._animationController.setValue('Attack', true);
+        const shouldPerformProvocativelyAttack = Math.random() > 0.5;
+        if (shouldPerformProvocativelyAttack) {
+            this._animationController.setValue('Attack', true);
+        } else {
+            this._animationController.setValue('ProvocativelyAttack', true);
+        }
+        this._isProvocativelyAttack = shouldPerformProvocativelyAttack;
         this._attackFinished = false;
-        const targetEnemy = this._targetEnemy;
-        if (targetEnemy) {
-            const damageable = targetEnemy.getComponent<Damageable>(Damageable);
-            if (damageable) {
-                (async () => {
-                    await waitFor(0.5);
-                    damageable.applyDamage({
-                        key: DamageKey.CH36_ATTACK,
-                        source: this,
-                        direction: getForward(this.node),
-                    });
-                })();
+        if (shouldPerformProvocativelyAttack) {
+            const targetEnemy = this._targetEnemy;
+            if (targetEnemy) {
+                const damageable = targetEnemy.getComponent<Damageable>(Damageable);
+                if (damageable) {
+                    (async () => {
+                        await waitFor(0.5);
+                        damageable.applyDamage({
+                            key: DamageKey.CH36_ATTACK,
+                            source: this,
+                            direction: getForward(this.node),
+                        });
+                    })();
+                }
             }
         }
     }

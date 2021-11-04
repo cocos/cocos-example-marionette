@@ -14,6 +14,7 @@
     "__type__": "cc.Node",
     "_name": "MonsterCh36",
     "_objFlags": 0,
+    "__editorExtras__": {},
     "_parent": null,
     "_children": [
       {
@@ -3937,7 +3938,7 @@
       "__id__": 151
     },
     "_group": 4,
-    "_type": 1,
+    "_type": 4,
     "_mass": 1,
     "_allowSleep": true,
     "_linearDamping": 0.1,
@@ -3951,9 +3952,9 @@
     },
     "_angularFactor": {
       "__type__": "cc.Vec3",
-      "x": 1,
+      "x": 0,
       "y": 1,
-      "z": 1
+      "z": 0
     },
     "_id": ""
   },
