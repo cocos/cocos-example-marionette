@@ -1,0 +1,141 @@
+{
+  "ver": "2.1.9",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "521a2b34-1406-4662-9e34-9baeb508ab6f",
+  "files": [],
+  "subMetas": {
+    "46540": {
+      "importer": "gltf-mesh",
+      "uuid": "521a2b34-1406-4662-9e34-9baeb508ab6f@46540",
+      "displayName": "",
+      "id": "46540",
+      "name": "Box001.mesh",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "08c68": {
+      "importer": "gltf-mesh",
+      "uuid": "521a2b34-1406-4662-9e34-9baeb508ab6f@08c68",
+      "displayName": "",
+      "id": "08c68",
+      "name": "Plane.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "bfe4c": {
+      "importer": "gltf-embeded-image",
+      "uuid": "521a2b34-1406-4662-9e34-9baeb508ab6f@bfe4c",
+      "displayName": "",
+      "id": "bfe4c",
+      "name": "Ground.image",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".png",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "39e72": {
+      "importer": "texture",
+      "uuid": "521a2b34-1406-4662-9e34-9baeb508ab6f@39e72",
+      "displayName": "",
+      "id": "39e72",
+      "name": "Ground.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "521a2b34-1406-4662-9e34-9baeb508ab6f@bfe4c"
+      },
+      "ver": "1.0.21",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b12cd": {
+      "importer": "gltf-material",
+      "uuid": "521a2b34-1406-4662-9e34-9baeb508ab6f@b12cd",
+      "displayName": "",
+      "id": "b12cd",
+      "name": "Ground.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7621e": {
+      "importer": "gltf-scene",
+      "uuid": "521a2b34-1406-4662-9e34-9baeb508ab6f@7621e",
+      "displayName": "",
+      "id": "7621e",
+      "name": "Ground.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "Ground",
+        "uri": "521a2b34-1406-4662-9e34-9baeb508ab6f@bfe4c"
+      }
+    ],
+    "legacyFbxImporter": false,
+    "redirect": "521a2b34-1406-4662-9e34-9baeb508ab6f@7621e",
+    "assetFinder": {
+      "meshes": [
+        "521a2b34-1406-4662-9e34-9baeb508ab6f@08c68",
+        "521a2b34-1406-4662-9e34-9baeb508ab6f@46540"
+      ],
+      "skeletons": [],
+      "textures": [
+        "521a2b34-1406-4662-9e34-9baeb508ab6f@39e72"
+      ],
+      "materials": [
+        "521a2b34-1406-4662-9e34-9baeb508ab6f@b12cd"
+      ],
+      "scenes": [
+        "521a2b34-1406-4662-9e34-9baeb508ab6f@7621e"
+      ]
+    }
+  }
+}
