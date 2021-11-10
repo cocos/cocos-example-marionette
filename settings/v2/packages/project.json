@@ -23,14 +23,19 @@
       {
         "index": 4,
         "name": "Bondary"
+      },
+      {
+        "index": 5,
+        "name": "MainCharacterBullet"
       }
     ],
     "collisionMatrix": {
-      "0": 7,
+      "0": 39,
       "1": 17,
-      "2": 17,
+      "2": 49,
       "3": 16,
-      "4": 14
+      "4": 46,
+      "5": 21
     }
   }
 }

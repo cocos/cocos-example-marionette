@@ -53,9 +53,9 @@
     "__type__": "cc.animation.StateMachine",
     "__editorExtras__": {
       "viewport": {
-        "scale": 0.94,
-        "top": 118.72381828406917,
-        "left": 364.68275423881005
+        "scale": 1,
+        "top": 138.23749347422273,
+        "left": 398.223444767016
       }
     },
     "_states": [
@@ -2464,7 +2464,7 @@
   {
     "__type__": "cc.animation.BindableNumber",
     "variable": "",
-    "value": 1
+    "value": 0.2
   },
   {
     "__type__": "cc.animation.Motion",

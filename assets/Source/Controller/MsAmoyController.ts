@@ -10,6 +10,7 @@ import { CharacterStatus } from './CharacterStatus';
 const { ccclass, property } = _decorator;
 import { DamageKey, DAMAGE_TABLE } from '../GamePlay/Damage/DamageTable';
 import { waitFor } from '../Utils/Misc';
+import { Bullet } from '../GamePlay/Bullet';
 
 @ccclass('MsAmoyController')
 export class MsAmoyController extends Component {
@@ -97,17 +98,19 @@ export class MsAmoyController extends Component {
             return;
         }
         this._fire();
-        // const gun = this.gun;
-        // for (let i = 0; i < 1; ++i) {
-        //     const bullet = instantiate(this.bullet);
-        //     bullet.setPosition(gun.worldPosition);
-        //     bullet.forward = gun.forward;
-        //     gun.scene.addChild(bullet);
-        //     const rigidBody = bullet.getComponentInChildren<RigidBody>(RigidBody)!;
-        //     rigidBody.applyForce(
-        //         math.Vec3.multiplyScalar(new math.Vec3(), getForward(this.node), 50.0),
-        //     );
-        // }
+        const gun = this.gun;
+        for (let i = 0; i < 10; ++i) {
+            const bullet = instantiate(this.bullet);
+            bullet.setPosition(gun.worldPosition);
+            bullet.forward = gun.forward;
+            gun.scene.addChild(bullet);
+            const bulletComponent = bullet.getComponentInChildren(Bullet)!;
+            bulletComponent.source = this;
+            const rigidBody = bullet.getComponentInChildren<RigidBody>(RigidBody)!;
+            rigidBody.applyForce(
+                math.Vec3.multiplyScalar(new math.Vec3(), getForward(this.node), 50.0),
+            );
+        }
     }
 
     public onIronSightsClicked() {
@@ -216,24 +219,24 @@ export class MsAmoyController extends Component {
             forward.y,
             forward.z,
         );
-        const attackInfo = DAMAGE_TABLE[DamageKey.AMOY_ATTACK];
-        if (PhysicsSystem.instance.raycast(
-            ray,
-            1 << 2,
-            attackInfo.distance,
-            false,
-        )) {
-            for (const raycastResult of PhysicsSystem.instance.raycastResults) {
-                const damageable = raycastResult.collider.node.getComponent<Damageable>(Damageable);
-                if (damageable) {
-                    damageable.applyDamage({
-                        key: DamageKey.AMOY_ATTACK,
-                        source: this,
-                        direction: forward,
-                    });
-                }
-            }
-        }
+        // const attackInfo = DAMAGE_TABLE[DamageKey.AMOY_ATTACK];
+        // if (PhysicsSystem.instance.raycast(
+        //     ray,
+        //     1 << 2,
+        //     attackInfo.distance,
+        //     false,
+        // )) {
+        //     for (const raycastResult of PhysicsSystem.instance.raycastResults) {
+        //         const damageable = raycastResult.collider.node.getComponent<Damageable>(Damageable);
+        //         if (damageable) {
+        //             damageable.applyDamage({
+        //                 key: DamageKey.AMOY_ATTACK,
+        //                 source: this,
+        //                 direction: forward,
+        //             });
+        //         }
+        //     }
+        // }
 
         (async () => {
             await waitFor(0.3);

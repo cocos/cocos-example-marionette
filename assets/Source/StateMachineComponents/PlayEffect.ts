@@ -18,7 +18,11 @@ export class PlayEffect extends animation.StateMachineComponent {
     
     onMotionStateEnter (controller: animation.AnimationController) {
         const component = controller.getComponentInChildren<ParticleSystem>(ParticleSystem);
-        component?.play();
+        if (component) {
+            component.clear();
+            component.stop();
+            component.play();
+        }
     }
   
     onMotionStateExit (controller: animation.AnimationController) {
