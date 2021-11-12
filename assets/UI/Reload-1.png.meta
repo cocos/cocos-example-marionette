@@ -2,7 +2,7 @@
   "ver": "1.0.22",
   "importer": "image",
   "imported": true,
-  "uuid": "81a1459b-a446-4e93-883b-1a23437afd36",
+  "uuid": "cd826acb-db5f-4960-b40d-276d8f0a488d",
   "files": [
     ".png",
     ".json"
@@ -10,8 +10,8 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "81a1459b-a446-4e93-883b-1a23437afd36@6c48a",
-      "displayName": "JoystickBar",
+      "uuid": "cd826acb-db5f-4960-b40d-276d8f0a488d@6c48a",
+      "displayName": "Reload-1",
       "id": "6c48a",
       "name": "texture",
       "userData": {
@@ -19,10 +19,10 @@
         "wrapModeT": "clamp-to-edge",
         "minfilter": "linear",
         "magfilter": "linear",
-        "mipfilter": "none",
+        "mipfilter": "nearest",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "81a1459b-a446-4e93-883b-1a23437afd36"
+        "imageUuidOrDatabaseUri": "cd826acb-db5f-4960-b40d-276d8f0a488d"
       },
       "ver": "1.0.21",
       "imported": true,
@@ -33,8 +33,8 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "81a1459b-a446-4e93-883b-1a23437afd36@f9941",
-      "displayName": "JoystickBar",
+      "uuid": "cd826acb-db5f-4960-b40d-276d8f0a488d@f9941",
+      "displayName": "Reload-1",
       "id": "f9941",
       "name": "spriteFrame",
       "userData": {
@@ -45,17 +45,17 @@
         "offsetY": 0,
         "trimX": 0,
         "trimY": 0,
-        "width": 73,
-        "height": 78,
-        "rawWidth": 73,
-        "rawHeight": 78,
+        "width": 512,
+        "height": 512,
+        "rawWidth": 512,
+        "rawHeight": 512,
         "borderTop": 0,
         "borderBottom": 0,
         "borderLeft": 0,
         "borderRight": 0,
         "packable": true,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "81a1459b-a446-4e93-883b-1a23437afd36@6c48a",
+        "imageUuidOrDatabaseUri": "cd826acb-db5f-4960-b40d-276d8f0a488d@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.9",
@@ -69,6 +69,6 @@
   "userData": {
     "hasAlpha": true,
     "type": "sprite-frame",
-    "redirect": "81a1459b-a446-4e93-883b-1a23437afd36@f9941"
+    "redirect": "cd826acb-db5f-4960-b40d-276d8f0a488d@f9941"
   }
 }

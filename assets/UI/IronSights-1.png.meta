@@ -2,7 +2,7 @@
   "ver": "1.0.22",
   "importer": "image",
   "imported": true,
-  "uuid": "8820e566-e5f3-4970-8f2f-972a48176fe4",
+  "uuid": "d19ef358-e81b-4a2c-8c79-6ad92e885f56",
   "files": [
     ".png",
     ".json"
@@ -10,8 +10,8 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "8820e566-e5f3-4970-8f2f-972a48176fe4@6c48a",
-      "displayName": "JoystickBackground",
+      "uuid": "d19ef358-e81b-4a2c-8c79-6ad92e885f56@6c48a",
+      "displayName": "IronSights-1",
       "id": "6c48a",
       "name": "texture",
       "userData": {
@@ -19,10 +19,10 @@
         "wrapModeT": "clamp-to-edge",
         "minfilter": "linear",
         "magfilter": "linear",
-        "mipfilter": "none",
+        "mipfilter": "nearest",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "8820e566-e5f3-4970-8f2f-972a48176fe4"
+        "imageUuidOrDatabaseUri": "d19ef358-e81b-4a2c-8c79-6ad92e885f56"
       },
       "ver": "1.0.21",
       "imported": true,
@@ -33,8 +33,8 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "8820e566-e5f3-4970-8f2f-972a48176fe4@f9941",
-      "displayName": "JoystickBackground",
+      "uuid": "d19ef358-e81b-4a2c-8c79-6ad92e885f56@f9941",
+      "displayName": "IronSights-1",
       "id": "f9941",
       "name": "spriteFrame",
       "userData": {
@@ -45,17 +45,17 @@
         "offsetY": 0,
         "trimX": 0,
         "trimY": 0,
-        "width": 103,
-        "height": 103,
-        "rawWidth": 103,
-        "rawHeight": 103,
+        "width": 512,
+        "height": 512,
+        "rawWidth": 512,
+        "rawHeight": 512,
         "borderTop": 0,
         "borderBottom": 0,
         "borderLeft": 0,
         "borderRight": 0,
         "packable": true,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "8820e566-e5f3-4970-8f2f-972a48176fe4@6c48a",
+        "imageUuidOrDatabaseUri": "d19ef358-e81b-4a2c-8c79-6ad92e885f56@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.9",
@@ -69,6 +69,6 @@
   "userData": {
     "hasAlpha": true,
     "type": "sprite-frame",
-    "redirect": "8820e566-e5f3-4970-8f2f-972a48176fe4@f9941"
+    "redirect": "d19ef358-e81b-4a2c-8c79-6ad92e885f56@f9941"
   }
 }

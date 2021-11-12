@@ -11,7 +11,7 @@ export enum JoystickEventType {
 
 @cc._decorator.ccclass
 export class Joystick extends cc.Eventify(cc.Component) {
-    public backgroundRadius = 40;
+    public backgroundRadius = 100;
 
     get pressing () {
         return this._pressing;

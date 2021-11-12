@@ -2,7 +2,7 @@
   "ver": "1.0.22",
   "importer": "image",
   "imported": true,
-  "uuid": "bc1d561b-5360-4822-9785-8a06c7ec5954",
+  "uuid": "4545cc47-01e9-44c0-ad37-2dd17799e0c1",
   "files": [
     ".png",
     ".json"
@@ -10,8 +10,8 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "bc1d561b-5360-4822-9785-8a06c7ec5954@6c48a",
-      "displayName": "IronSights",
+      "uuid": "4545cc47-01e9-44c0-ad37-2dd17799e0c1@6c48a",
+      "displayName": "Jump",
       "id": "6c48a",
       "name": "texture",
       "userData": {
@@ -22,7 +22,7 @@
         "mipfilter": "nearest",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "bc1d561b-5360-4822-9785-8a06c7ec5954"
+        "imageUuidOrDatabaseUri": "4545cc47-01e9-44c0-ad37-2dd17799e0c1"
       },
       "ver": "1.0.21",
       "imported": true,
@@ -33,8 +33,8 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "bc1d561b-5360-4822-9785-8a06c7ec5954@f9941",
-      "displayName": "IronSights",
+      "uuid": "4545cc47-01e9-44c0-ad37-2dd17799e0c1@f9941",
+      "displayName": "Jump",
       "id": "f9941",
       "name": "spriteFrame",
       "userData": {
@@ -43,10 +43,10 @@
         "rotated": false,
         "offsetX": 0,
         "offsetY": 0,
-        "trimX": 3,
-        "trimY": 3,
-        "width": 506,
-        "height": 506,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 512,
+        "height": 512,
         "rawWidth": 512,
         "rawHeight": 512,
         "borderTop": 0,
@@ -55,7 +55,7 @@
         "borderRight": 0,
         "packable": true,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "bc1d561b-5360-4822-9785-8a06c7ec5954@6c48a",
+        "imageUuidOrDatabaseUri": "4545cc47-01e9-44c0-ad37-2dd17799e0c1@6c48a",
         "atlasUuid": ""
       },
       "ver": "1.0.9",
@@ -69,6 +69,6 @@
   "userData": {
     "hasAlpha": true,
     "type": "sprite-frame",
-    "redirect": "bc1d561b-5360-4822-9785-8a06c7ec5954@f9941"
+    "redirect": "4545cc47-01e9-44c0-ad37-2dd17799e0c1@f9941"
   }
 }
