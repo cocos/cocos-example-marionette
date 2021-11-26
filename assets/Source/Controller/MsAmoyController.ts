@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, animation, math, input, Input, Touch, EventTouch, EventMouse, systemEvent, SystemEvent, sys, Prefab, instantiate, RigidBody, PhysicsSystem, RecyclePool, physics, geometry } from 'cc';
+import { _decorator, Component, Node, animation, math, input, Input, Touch, EventTouch, EventMouse, systemEvent, SystemEvent, sys, Prefab, instantiate, RigidBody, PhysicsSystem, RecyclePool, physics, geometry, director, Vec3 } from 'cc';
 import { Damageable } from '../GamePlay/Damage/Damagable';
 import { Damage } from '../GamePlay/Damage/Damage';
 import { Joystick, JoystickEventType } from '../GamePlay/Joystick';
@@ -47,11 +47,10 @@ export class MsAmoyController extends Component {
         }
 
         this.joyStick.on(JoystickEventType.MOVE, (joystickDirection: Readonly<math.Vec2>) => {
-            const baseSpeed = this._ironSights ? 1.0 : 2.0;
-            const velocity = new math.Vec3(-joystickDirection.x, 0.0, joystickDirection.y);
-            math.Vec3.normalize(velocity, velocity);
-            math.Vec3.multiplyScalar(velocity, velocity, baseSpeed);
-            this._charStatus.localVelocity = velocity;
+            if (!this._canMove()) {
+                return;
+            }
+            this._applyJoystickDirection();
         });
 
         this.joyStick.on(JoystickEventType.RELEASE, () => {
@@ -71,15 +70,17 @@ export class MsAmoyController extends Component {
         const { _charStatus: characterStatus } = this;
         const { localVelocity } = characterStatus;
 
-        const velocity2D = new math.Vec2(localVelocity.x, localVelocity.z);
-        // cc.math.Vec2.normalize(velocity2D, velocity2D);
-        this._animationController.setValue('VelocityX', -velocity2D.x);
-        this._animationController.setValue('VelocityY', velocity2D.y);
+        if (this._canMove()) {
+            const velocity2D = new math.Vec2(localVelocity.x, localVelocity.z);
+            // cc.math.Vec2.normalize(velocity2D, velocity2D);
+            this._animationController.setValue('VelocityX', -velocity2D.x);
+            this._animationController.setValue('VelocityY', velocity2D.y);
+        }
     }
 
     public onCrouchButtonClicked() {
-        this._crouching = !this._crouching;
-        this._animationController.setValue('Crouching', this._crouching);
+        this._isCrouching = !this._isCrouching;
+        this._animationController.setValue('Crouching', this._isCrouching);
     }
 
     public onJumpClicked() {
@@ -91,10 +92,7 @@ export class MsAmoyController extends Component {
     }
 
     public onFireClicked() {
-        if (this._crouching) {
-            return;
-        }
-        if (!this._canFire) {
+        if (!this._canFire()) {
             return;
         }
         this._fire();
@@ -135,14 +133,32 @@ export class MsAmoyController extends Component {
     @injectComponent(Damageable)
     private _damageable!: Damageable;
 
-    private _crouching = false;
+    private _isCrouching = false;
     private _ironSights = false;
     private _turnEnabled = false;
-    private _canFire = true;
+    private _isFiring = false;
+    private _isReactingToHit = false;
     private _rayCastResultPool = new RecyclePool<physics.PhysicsRayResult>(
         () => new physics.PhysicsRayResult(),
         4,
     );
+
+    private _canMove() {
+        return !this._isFiring && !this._isReactingToHit;
+    }
+
+    private _canFire() {
+        return !this._isFiring && !this._isCrouching;
+    }
+
+    private _applyJoystickDirection() {
+        const { joyStick: { direction: joystickDirection } } = this;
+        const baseSpeed = this._ironSights ? 1.0 : 2.0;
+        const velocity = new math.Vec3(-joystickDirection.x, 0.0, joystickDirection.y);
+        math.Vec3.normalize(velocity, velocity);
+        math.Vec3.multiplyScalar(velocity, velocity, baseSpeed);
+        this._charStatus.localVelocity = velocity;
+    }
 
     private _onMouseDown (event: EventMouse) {
         switch (event.getButton()) {
@@ -196,10 +212,29 @@ export class MsAmoyController extends Component {
 
     private _onDamaged(damage: Damage) {
         this._animationController.setValue('Hit', true);
+
+        this._isReactingToHit = true;
+
+        this._charStatus.velocity = Vec3.ZERO;
+
+        const scheduler = director.getScheduler();
+        if (scheduler.isScheduled(this._onHitReactionTimeElapsed, this)) {
+            scheduler.unschedule(this._onHitReactionTimeElapsed, this);
+        }
+        scheduler.schedule(this._onHitReactionTimeElapsed, this, 0.8);
+    }
+
+    private _onHitReactionTimeElapsed() {
+        this._isReactingToHit = false;
+
+        this._applyJoystickDirection();
+
+        const scheduler = director.getScheduler();
+        scheduler.unschedule(this._onHitReactionTimeElapsed, this);
     }
 
     private _fire() {
-        this._canFire = false;
+        this._isFiring = true;
 
         const {
             node,
@@ -240,7 +275,7 @@ export class MsAmoyController extends Component {
 
         (async () => {
             await waitFor(0.3);
-            this._canFire = true;
+            this._isFiring = false;
         })();
     }
 }

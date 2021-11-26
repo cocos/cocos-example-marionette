@@ -5,19 +5,19 @@
       "base",
       "gfx-webgl",
       "gfx-webgl2",
+      "3d",
+      "2d",
+      "ui",
+      "particle",
+      "physics-physx",
+      "primitive",
       "profiler",
       "audio",
       "video",
       "webview",
       "tween",
-      "marionette",
-      "3d",
-      "particle",
-      "physics-physx",
-      "primitive",
       "terrain",
-      "2d",
-      "ui"
+      "marionette"
     ],
     "flags": {
       "2d": {

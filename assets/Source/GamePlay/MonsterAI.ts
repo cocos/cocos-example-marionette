@@ -31,6 +31,17 @@ export class MonsterAI extends cc.Component {
         visible: function(this: MonsterAI) {
             return this.attackEnabled;
         },
+        min: 0.0,
+        max: 1.0,
+        slide: true,
+        step: 0.01,
+    })
+    public provocationProbability = 0.3;
+
+    @cc._decorator.property({
+        visible: function(this: MonsterAI) {
+            return this.attackEnabled;
+        },
     })
     public seekingRadius = 0.0;
 
@@ -129,7 +140,7 @@ export class MonsterAI extends cc.Component {
 
     private _attackFinished = true;
 
-    private _isProvocativelyAttack = false;
+    private _isProvoking = false;
 
     private _onStateNone () {
         this._startIdle();
@@ -306,15 +317,15 @@ export class MonsterAI extends cc.Component {
 
     private _startAttack() {
         this._state = AIState.ATTACKING;
-        const shouldPerformProvocativelyAttack = Math.random() > 0.5;
-        if (shouldPerformProvocativelyAttack) {
-            this._animationController.setValue('Attack', true);
-        } else {
+        const shouldPerformProvocation = Math.random() < this.provocationProbability;
+        if (shouldPerformProvocation) {
             this._animationController.setValue('ProvocativelyAttack', true);
+        } else {
+            this._animationController.setValue('Attack', true);
         }
-        this._isProvocativelyAttack = shouldPerformProvocativelyAttack;
+        this._isProvoking = shouldPerformProvocation;
         this._attackFinished = false;
-        if (shouldPerformProvocativelyAttack) {
+        if (!shouldPerformProvocation) {
             const targetEnemy = this._targetEnemy;
             if (targetEnemy) {
                 const damageable = targetEnemy.getComponent<Damageable>(Damageable);

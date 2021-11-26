@@ -41,9 +41,9 @@
     "__type__": "cc.animation.StateMachine",
     "__editorExtras__": {
       "viewport": {
-        "scale": 1.1600000000000001,
-        "top": -357.6425610696725,
-        "left": -374.5542056085331
+        "scale": 0.8199999999999998,
+        "top": -158.39635100842474,
+        "left": -193.71750847387744
       }
     },
     "_states": [
@@ -837,7 +837,7 @@
     },
     "conditions": [],
     "duration": 0.2,
-    "relativeDuration": false,
+    "relativeDuration": true,
     "exitConditionEnabled": true,
     "_exitCondition": 0.8
   },

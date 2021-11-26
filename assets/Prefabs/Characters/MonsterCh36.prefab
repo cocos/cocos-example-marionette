@@ -3872,6 +3872,7 @@
     "minSpeed": 1,
     "maxSpeed": 2,
     "attackEnabled": true,
+    "provocationProbability": 0.1,
     "seekingRadius": 2.5,
     "attackRadius": 1.5,
     "abandonDistance": 5,

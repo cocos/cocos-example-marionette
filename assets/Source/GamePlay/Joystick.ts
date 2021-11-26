@@ -154,6 +154,7 @@ export class Joystick extends cc.Eventify(cc.Component) {
         this._background.setPosition(this._originalPositionBackground);
         this._pressing = false;
         this.emit(JoystickEventType.RELEASE);
+        cc.math.Vec2.set(this._direction, 0.0, 0.0);
         globalThis.document?.exitPointerLock?.();
     }
 
