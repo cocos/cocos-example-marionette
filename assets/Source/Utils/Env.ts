@@ -1,3 +1,4 @@
+import { sys } from "cc";
 
 declare global {
     namespace globalThis {
@@ -12,7 +13,5 @@ export function useMouseInput() {
 }
 
 function isTouchDevice() {
-    return (('ontouchstart' in globalThis) ||
-        (globalThis.navigator.maxTouchPoints > 0) ||
-        (globalThis.navigator.msMaxTouchPoints > 0));
+    return sys.hasFeature(sys.Feature.INPUT_TOUCH);
 }

@@ -279,7 +279,7 @@ export class FirstPersonCamera extends cc.Component {
 
     private _onTouchEnd (eventTouch: cc.EventTouch) {
         this._touches = this._touches.filter((touch) =>
-            eventTouch.getTouches().findIndex((removal) => removal.getID() !== touch.id) < 0);
+            eventTouch.getTouches().findIndex((removal) => removal.getID() === touch.id) < 0);
     }
 
     private _updatePosition () {
