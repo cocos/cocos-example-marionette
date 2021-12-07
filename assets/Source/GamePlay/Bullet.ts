@@ -1,9 +1,10 @@
 
-import { _decorator, Component, Node, Collider, ICollisionEvent, math, RigidBody } from 'cc';
+import { _decorator, Component, Node, Collider, ICollisionEvent, math, RigidBody, Vec3 } from 'cc';
 import { MsAmoyController } from '../Controller/MsAmoyController';
 import { injectComponent } from '../Utils/Component';
 import { Damageable } from './Damage/Damagable';
 import { DamageKey } from './Damage/DamageTable';
+import { PhysicsIndex } from './Constants';
 const { ccclass, property } = _decorator;
 
 /**
@@ -27,33 +28,45 @@ export class Bullet extends Component {
         this._collider.on('onCollisionEnter', this._onCollisionEnter, this);
     }
 
-    // update (deltaTime: number) {
-    //     // [4]
-    // }
+    update (deltaTime: number) {
+        if (this._rigidBody.isSleeping) {
+            this.destroy();
+        }
+        // const velocity = new math.Vec3();
+        // this._rigidBody.getLinearVelocity(velocity);
+        // if (math.Vec3.equals(math.Vec3.ZERO, velocity)) {
+        //     this.destroy();
+        // }
+    }
 
-    @injectComponent(Collider)
+    @injectComponent(Collider, true)
     private _collider!: Collider;
 
-    @injectComponent(RigidBody)
+    @injectComponent(RigidBody, true)
     private _rigidBody!: RigidBody;
 
     private _hit = false;
 
     private _onCollisionEnter(event: ICollisionEvent) {
-        if (this._hit) {
-            return;
-        }
-        this._hit = true;
         const thatCollider = event.otherCollider;
-        const damageable = thatCollider.node.getComponent(Damageable);
-        if (!damageable) {
-            return;
+        if (thatCollider.getGroup() & (1 << PhysicsIndex.ENEMY)) {
+            if (this._hit) {
+                return;
+            } else {
+                this._hit = true;
+                const damageable = thatCollider.node.getComponent(Damageable);
+                if (!damageable) {
+                    return;
+                }
+                damageable.applyDamage({
+                    key: DamageKey.CH36_ATTACK,
+                    source: this.source,
+                    direction: math.Vec3.clone(this.node.forward),
+                });
+                this.node.destroy();
+            }
+        } else if (thatCollider.getGroup() & (1 << PhysicsIndex.DEFAULT)) {
         }
-        damageable.applyDamage({
-            key: DamageKey.CH36_ATTACK,
-            source: this.source,
-            direction: math.Vec3.clone(this.node.forward),
-        });
     }
 }
 

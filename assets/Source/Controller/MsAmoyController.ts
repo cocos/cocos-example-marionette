@@ -102,7 +102,7 @@ export class MsAmoyController extends Component {
             bullet.setPosition(gun.worldPosition);
             bullet.forward = gun.forward;
             gun.scene.addChild(bullet);
-            const bulletComponent = bullet.getComponentInChildren(Bullet)!;
+            const bulletComponent = bullet.getComponent(Bullet)!;
             bulletComponent.source = this;
             const rigidBody = bullet.getComponentInChildren<RigidBody>(RigidBody)!;
             rigidBody.applyForce(

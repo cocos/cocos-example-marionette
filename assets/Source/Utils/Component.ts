@@ -4,7 +4,7 @@ const START_METHOD_NAME = 'start';
 
 type StartMethod<T extends Component> = (this: T) => void;
 
-export function injectComponent<T extends Component>(componentConstructor: Constructor<T>): PropertyDecorator {
+export function injectComponent<T extends Component>(componentConstructor: Constructor<T>, children = false): PropertyDecorator {
     return (target, propertyKey) => {
         const oldDescriptor = Object.getOwnPropertyDescriptor(target, START_METHOD_NAME);
 
@@ -22,7 +22,7 @@ export function injectComponent<T extends Component>(componentConstructor: Const
             enumerable: false,
             writable: true,
             value: function (this: T) {
-                const instance = this.node.getComponent(componentConstructor);
+                const instance = children ? this.node.getComponentInChildren(componentConstructor) : this.node.getComponent(componentConstructor);
                 Reflect.set(this, propertyKey, instance);
 
                 if (oldMethod) {
