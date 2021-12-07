@@ -43,7 +43,7 @@ export class RectShape implements Shape {
     @_decorator.property(math.Vec2)
     public center = new math.Vec2();
 
-    @_decorator.property(math.Vec2)
+    @_decorator.property(math.Size)
     public size = new math.Size();
 
     public includes(point: math.Vec2) {
@@ -60,6 +60,23 @@ export class RectShape implements Shape {
         return math.Vec2.add(out, this.center, new math.Vec2(x, y));
     }
 
+    public clamp(v: math.Vec2, out?: math.Vec2) {
+        const {
+            center,
+            size: {
+                width,
+                height,
+            },
+        } = this;
+
+        out ??= new math.Vec2();
+        math.Vec2.set(
+            out,
+            math.clamp(v.x, center.x - width / 2, center.x + width / 2),
+            math.clamp(v.y, center.y - height / 2, center.y + height / 2),
+        );
+    }
+
     public onGizmo (context: GraphicsGizmo) {
         const {
             center,
@@ -70,9 +87,10 @@ export class RectShape implements Shape {
         } = this;
         const p = new math.Vec3();
         context.moveTo(math.Vec3.set(p, center.x - width / 2, 0.0, center.y - height / 2));
-        context.moveTo(math.Vec3.set(p, center.x + width / 2, 0.0, center.y - height / 2));
-        context.moveTo(math.Vec3.set(p, center.x + width / 2, 0.0, center.y + height / 2));
-        context.moveTo(math.Vec3.set(p, center.x - width / 2, 0.0, center.y + height / 2));
+        context.lineTo(math.Vec3.set(p, center.x + width / 2, 0.0, center.y - height / 2), true);
+        context.lineTo(math.Vec3.set(p, center.x + width / 2, 0.0, center.y + height / 2), true);
+        context.lineTo(math.Vec3.set(p, center.x - width / 2, 0.0, center.y + height / 2), true);
+        context.lineTo(math.Vec3.set(p, center.x - width / 2, 0.0, center.y - height / 2), true);
     }
 }
 

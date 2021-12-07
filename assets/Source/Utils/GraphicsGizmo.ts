@@ -77,9 +77,12 @@ export class GraphicsGizmo extends cc.Component {
         cc.math.Vec3.copy(this._brushPosition, point);
     }
 
-    public lineTo (point: Readonly<cc.math.Vec3>) {
+    public lineTo (point: Readonly<cc.math.Vec3>, move = false) {
         this._addVertex(this._brushPosition);
         this._addVertex(point);
+        if (move) {
+            this.moveTo(point);
+        }
     }
 
     public circle (radius: number, segments = 30) {

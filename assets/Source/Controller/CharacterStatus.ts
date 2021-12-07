@@ -1,6 +1,7 @@
 
 
 import * as cc from 'cc';
+import { Boundary } from '../GamePlay/Boundary';
 import { towardVec3 } from '../Utils/Math';
 
 const DEFAULT_ACCELERATION = 1.29 * 4.0;
@@ -35,6 +36,10 @@ export class CharacterStatus extends cc.Component {
         this.velocity = velocity;
     }
 
+    public start() {
+        this._rigidBody = this.node.getComponent(cc.RigidBody) ?? this.node.getComponentInChildren(cc.RigidBody);
+    }
+
     public update (deltaTime: number) {
         // deltaTime = 1.0 / 16.0;
         const {
@@ -55,9 +60,19 @@ export class CharacterStatus extends cc.Component {
         }
         
         if (!cc.math.Vec3.equals(velocity, cc.math.Vec3.ZERO, VELOCITY_ERROR)) {
-            const newPosition = cc.math.Vec3.scaleAndAdd(
-                new cc.math.Vec3(), this.node.position, velocity, deltaTime);
-            this.node.setPosition(newPosition);
+            if (this._rigidBody && this._rigidBody.type !== cc.RigidBody.Type.KINEMATIC) {
+                this._rigidBody.setLinearVelocity(velocity);
+            } else {
+                const newPosition = cc.math.Vec3.scaleAndAdd(
+                    new cc.math.Vec3(), this.node.position, velocity, deltaTime);
+                if (Boundary.instance) {
+                    const xz = new cc.math.Vec2(newPosition.x, newPosition.z);
+                    Boundary.instance.shape.clamp(xz, xz);
+                    newPosition.x = xz.x;
+                    newPosition.z = xz.y;
+                }
+                this.node.setPosition(newPosition);
+            }
         }
     }
 
@@ -70,6 +85,8 @@ export class CharacterStatus extends cc.Component {
         cc.math.Vec3.divide(diff, diff, this._acceleration);
         return Math.max(diff.x, diff.y, diff.z);
     }
+
+    private _rigidBody: cc.RigidBody | null = null;
 
     private _acceleration = new cc.math.Vec3(DEFAULT_ACCELERATION, DEFAULT_ACCELERATION, DEFAULT_ACCELERATION);
 

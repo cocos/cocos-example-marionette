@@ -65,6 +65,8 @@ export class MonsterAI extends cc.Component {
     public declare shapeSelector: ShapeSelector;
 
     start () {
+        this._rigidBody = this.getComponent(cc.RigidBody) ?? this.getComponentInChildren(cc.RigidBody);
+
         this._damageable.on(Damageable.EventType.DAMAGE, (damage) => {
             this._onDamaged(damage);
         });
@@ -119,6 +121,8 @@ export class MonsterAI extends cc.Component {
 
     @injectComponent(CharacterStatus)
     private _characterStatus!: CharacterStatus;
+
+    private _rigidBody: cc.RigidBody | null = null;
 
     @injectComponent(cc.animation.AnimationController)
     public _animationController!: cc.animation.AnimationController;
@@ -215,7 +219,11 @@ export class MonsterAI extends cc.Component {
         const time = Math.min(deltaTime, timeRequired);
         const q = cc.math.Quat.fromAxisAngle(new cc.math.Quat(), rotateAxis, time * rotateSpeed);
         const rotation = cc.math.Quat.multiply(new cc.math.Quat(), this.node.worldRotation, q);
-        this.node.setWorldRotation(rotation);
+        if (this._rigidBody  && this._rigidBody.type !== cc.RigidBody.Type.KINEMATIC) {
+            // this._rigidBody.setAngularVelocity();
+        } else {
+            this.node.setWorldRotation(rotation);
+        }
 
         if (!onlyYRotation(this.node)) {
             //debugger;

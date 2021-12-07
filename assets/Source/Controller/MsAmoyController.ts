@@ -78,6 +78,11 @@ export class MsAmoyController extends Component {
         }
     }
 
+    public lateUpdate() {
+        // Reset triggers
+        this._animationController.setValue('Hit', false);
+    }
+
     public onCrouchButtonClicked() {
         this._isCrouching = !this._isCrouching;
         this._animationController.setValue('Crouching', this._isCrouching);
