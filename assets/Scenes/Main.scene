@@ -435,7 +435,7 @@
     "_priority": 1073741824,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 320,
+    "_orthoHeight": 80.80808080808082,
     "_near": 1,
     "_far": 2000,
     "_color": {
@@ -3201,9 +3201,9 @@
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": -2.23,
+      "x": -2.315,
       "y": 0,
-      "z": -2.004
+      "z": 1.472
     },
     "_lrot": {
       "__type__": "cc.Quat",
@@ -3259,8 +3259,8 @@
     "__type__": "CircleShape",
     "center": {
       "__type__": "cc.Vec2",
-      "x": -2.23,
-      "y": -2.004
+      "x": -2.315,
+      "y": 1.472
     },
     "radius": 2
   },

@@ -64,14 +64,14 @@ export class CharacterStatus extends cc.Component {
                 this._rigidBody.setLinearVelocity(velocity);
             } else {
                 const newPosition = cc.math.Vec3.scaleAndAdd(
-                    new cc.math.Vec3(), this.node.position, velocity, deltaTime);
+                    new cc.math.Vec3(), this.node.worldPosition, velocity, deltaTime);
                 if (Boundary.instance) {
                     const xz = new cc.math.Vec2(newPosition.x, newPosition.z);
                     Boundary.instance.shape.clamp(xz, xz);
                     newPosition.x = xz.x;
                     newPosition.z = xz.y;
                 }
-                this.node.setPosition(newPosition);
+                this.node.setWorldPosition(newPosition);
             }
         }
     }

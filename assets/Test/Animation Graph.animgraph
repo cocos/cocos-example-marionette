@@ -1,0 +1,197 @@
+[
+  {
+    "__type__": "cc.animation.AnimationGraph",
+    "_name": "",
+    "_objFlags": 0,
+    "_native": "",
+    "_layers": [
+      {
+        "__id__": 1
+      }
+    ],
+    "_variables": {
+      "Blend": {
+        "__id__": 17
+      }
+    }
+  },
+  {
+    "__type__": "cc.animation.Layer",
+    "_stateMachine": {
+      "__id__": 2
+    },
+    "name": "",
+    "weight": 1,
+    "mask": null,
+    "blending": 1
+  },
+  {
+    "__type__": "cc.animation.StateMachine",
+    "_states": [
+      {
+        "__id__": 3
+      },
+      {
+        "__id__": 4
+      },
+      {
+        "__id__": 5
+      },
+      {
+        "__id__": 6
+      }
+    ],
+    "_transitions": [
+      {
+        "__id__": 16
+      }
+    ],
+    "_entryState": {
+      "__id__": 3
+    },
+    "_exitState": {
+      "__id__": 4
+    },
+    "_anyState": {
+      "__id__": 5
+    }
+  },
+  {
+    "__type__": "cc.animation.State",
+    "__editorExtras__": {
+      "centerX": -220,
+      "centerY": -22
+    },
+    "name": "Entry"
+  },
+  {
+    "__type__": "cc.animation.State",
+    "name": "Exit"
+  },
+  {
+    "__type__": "cc.animation.State",
+    "name": "Any"
+  },
+  {
+    "__type__": "cc.animation.Motion",
+    "__editorExtras__": {
+      "centerX": -6,
+      "centerY": -121
+    },
+    "name": "Blend 1D",
+    "_components": [],
+    "motion": {
+      "__id__": 7
+    },
+    "speed": {
+      "__id__": 15
+    }
+  },
+  {
+    "__type__": "cc.animation.AnimationBlend1D",
+    "__editorExtras__": {
+      "centerX": -42,
+      "centerY": -155,
+      "autoThreshold": false,
+      "viewport": {
+        "scale": 1,
+        "top": 0,
+        "left": -1
+      }
+    },
+    "name": "",
+    "_items": [
+      {
+        "__id__": 8
+      },
+      {
+        "__id__": 10
+      },
+      {
+        "__id__": 12
+      }
+    ],
+    "param": {
+      "__id__": 14
+    }
+  },
+  {
+    "__type__": "cc.animation.AnimationBlend1DItem",
+    "motion": {
+      "__id__": 9
+    },
+    "threshold": -1
+  },
+  {
+    "__type__": "cc.animation.ClipMotion",
+    "__editorExtras__": {
+      "centerX": -226,
+      "centerY": -80.1484375
+    },
+    "clip": {
+      "__uuid__": "8ef4576e-8b93-4e16-85fc-393f80a167b5@ded70",
+      "__expectedType__": "cc.AnimationClip"
+    }
+  },
+  {
+    "__type__": "cc.animation.AnimationBlend1DItem",
+    "motion": {
+      "__id__": 11
+    },
+    "threshold": 0
+  },
+  {
+    "__type__": "cc.animation.ClipMotion",
+    "__editorExtras__": {
+      "centerX": 168,
+      "centerY": -87.1484375
+    },
+    "clip": {
+      "__uuid__": "2cfdf991-0068-4c94-923b-15101cfd3b9c@98135",
+      "__expectedType__": "cc.AnimationClip"
+    }
+  },
+  {
+    "__type__": "cc.animation.AnimationBlend1DItem",
+    "motion": {
+      "__id__": 13
+    },
+    "threshold": 1
+  },
+  {
+    "__type__": "cc.animation.ClipMotion",
+    "__editorExtras__": {
+      "centerX": -29,
+      "centerY": 19.8515625
+    },
+    "clip": {
+      "__uuid__": "0f3f9168-c4e6-4537-bc7d-212ecf202f79@c363e",
+      "__expectedType__": "cc.AnimationClip"
+    }
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "Blend",
+    "value": 0
+  },
+  {
+    "__type__": "cc.animation.BindableNumber",
+    "variable": "",
+    "value": 1
+  },
+  {
+    "__type__": "cc.animation.Transition",
+    "from": {
+      "__id__": 3
+    },
+    "to": {
+      "__id__": 6
+    },
+    "conditions": []
+  },
+  {
+    "__type__": "cc.animation.Variable",
+    "_type": 0,
+    "_value": -0.5
+  }
+]
