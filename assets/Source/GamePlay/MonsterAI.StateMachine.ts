@@ -195,6 +195,10 @@ class WalkState extends State {
         this.context.data._characterStatus.localVelocity = cc.math.Vec3.multiplyScalar(new cc.math.Vec3(), cc.math.Vec3.UNIT_Z, speed);
     }
 
+    public exit(): void {
+        this.context.data._characterStatus.velocity = cc.math.Vec3.ZERO;
+    }
+
     public update(deltaTime: number) {
         if (this._timer > 0.0) {
             const t = Math.min(deltaTime, this._timer);
@@ -260,6 +264,10 @@ class ChaseState extends State {
         );
         return 0.0;
     }
+
+    public exit(): void {
+        this.context.data._characterStatus.velocity = cc.math.Vec3.ZERO;
+    }
 }
 
 class AttackState extends State {
@@ -309,9 +317,33 @@ class HitState extends State {
 
     public on(type: StateMachineEventType) {
         if (type === StateMachineEventType.HIT_END) {
-            this.context.stateMachine.transition(AIState.CHASING);
+            this.context.stateMachine.transition(AIState.FIGHT_IDLE);
         }
     }
+}
+
+class FightIdleState extends State {
+    public enter(): void {
+        this.context.data._animationController.setValue('Combating', true);
+        this._timer = this.context.component.fightIdleTime;
+    }
+
+    public update(deltaTime: number): number {
+        if (this.context.data._targetEnemy) {
+            this.context.stateMachine.transition(AIState.CHASING);
+            return deltaTime;
+        }
+        const consume = Math.min(deltaTime, this._timer);
+        const timerRemain = this._timer -= consume;
+        const inputRemain = deltaTime - consume;
+        if (timerRemain <= 0) {
+            this.context.data._animationController.setValue('Combating', false);
+            this.context.stateMachine.transition(AIState.IDLE);
+        }
+        return inputRemain;
+    }
+
+    private _timer = 0.0;
 }
 
 class EntryState extends State {
@@ -341,6 +373,7 @@ export class StateMachine {
             [AIState.ROTATING]: new TurnState(context),
             [AIState.STOPPING]: new StopState(context),
             [AIState.WALKING]: new WalkState(context),
+            [AIState.FIGHT_IDLE]: new FightIdleState(context),
         };
     }
 
@@ -353,6 +386,7 @@ export class StateMachine {
     }
 
     public transition (kind: AIState, ...args: unknown[]) {
+        this.currentState.exit();
         const state = this._states[kind];
         // @ts-ignore
         state.enter(...args);
@@ -407,4 +441,5 @@ enum AIState {
     ROTATING,
     ATTACKING,
     HIT,
+    FIGHT_IDLE,
 }

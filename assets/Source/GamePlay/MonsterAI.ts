@@ -21,6 +21,9 @@ export class MonsterAI extends cc.Component {
     public maxSpeed = 1.0;
 
     @cc._decorator.property
+    public fightIdleTime = 3.0;
+
+    @cc._decorator.property
     public attackEnabled = true;
 
     @cc._decorator.property({

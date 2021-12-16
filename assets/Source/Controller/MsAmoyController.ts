@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, animation, math, input, Input, Touch, EventTouch, EventMouse, systemEvent, SystemEvent, sys, Prefab, instantiate, RigidBody, PhysicsSystem, RecyclePool, physics, geometry, director, Vec3 } from 'cc';
+import { _decorator, Component, Node, animation, math, input, Input, Touch, EventTouch, EventMouse, systemEvent, SystemEvent, sys, Prefab, instantiate, RigidBody, PhysicsSystem, RecyclePool, physics, geometry, director, Vec3, EventKeyboard, KeyCode } from 'cc';
 import { Damageable } from '../GamePlay/Damage/Damagable';
 import { Damage } from '../GamePlay/Damage/Damage';
 import { Joystick, JoystickEventType } from '../GamePlay/Joystick';
@@ -60,10 +60,14 @@ export class MsAmoyController extends Component {
         this._damageable.on(Damageable.EventType.DAMAGE, (damage: Damage) => {
             this._onDamaged(damage);
         });
+
+        input.on(Input.EventType.KEY_UP, this._onKeyUp, this);
     }
 
     public onDestroy() {
         MsAmoyController.instance = null;
+
+        input.off(Input.EventType.KEY_UP, this._onKeyUp, this);
     }
 
     public update () {
@@ -81,44 +85,28 @@ export class MsAmoyController extends Component {
     public lateUpdate() {
         // Reset triggers
         this._animationController.setValue('Hit', false);
+        this._animationController.setValue('Jump', false);
+        this._animationController.setValue('Reload', false);
     }
 
     public onCrouchButtonClicked() {
-        this._isCrouching = !this._isCrouching;
-        this._animationController.setValue('Crouching', this._isCrouching);
+        this._requestCrouch();
     }
 
     public onJumpClicked() {
-        this._animationController.setValue('Jump', true);
+        this._jump();
     }
 
     public onReloadClicked() {
-        this._animationController.setValue('Reload', true);
+        this._reload();
     }
 
     public onFireClicked() {
-        if (!this._canFire()) {
-            return;
-        }
-        this._fire();
-        const gun = this.gun;
-        for (let i = 0; i < 10; ++i) {
-            const bullet = instantiate(this.bullet);
-            bullet.setPosition(gun.worldPosition);
-            bullet.forward = gun.forward;
-            gun.scene.addChild(bullet);
-            const bulletComponent = bullet.getComponent(Bullet)!;
-            bulletComponent.source = this;
-            const rigidBody = bullet.getComponentInChildren<RigidBody>(RigidBody)!;
-            rigidBody.applyForce(
-                math.Vec3.multiplyScalar(new math.Vec3(), getForward(this.node), 50.0),
-            );
-        }
+        this._requestFire();
     }
 
     public onIronSightsClicked() {
-        this._ironSights = !this._ironSights;
-        this._animationController.setValue('IronSights', this._ironSights);
+        this._requestIronSights();
     }
 
     public setVelocityX(value: number) {
@@ -215,6 +203,26 @@ export class MsAmoyController extends Component {
         }
     }
 
+    private _onKeyUp(event: EventKeyboard) {
+        switch (event.keyCode) {
+            case KeyCode.KEY_A:
+                this._requestFire();
+                break;
+            case KeyCode.KEY_Q:
+                this._requestIronSights();
+                break;
+            case KeyCode.SPACE:
+                this._jump();
+                break;
+            case KeyCode.KEY_R:
+                this._reload();
+                break;
+            case KeyCode.KEY_C:
+                this._requestCrouch();
+                break;
+        }
+    }
+
     private _onDamaged(damage: Damage) {
         this._animationController.setValue('Hit', true);
 
@@ -236,6 +244,28 @@ export class MsAmoyController extends Component {
 
         const scheduler = director.getScheduler();
         scheduler.unschedule(this._onHitReactionTimeElapsed, this);
+    }
+
+    private _requestFire() {
+        if (!this._canFire()) {
+            return;
+        }
+
+        this._fire();
+
+        const gun = this.gun;
+        for (let i = 0; i < 10; ++i) {
+            const bullet = instantiate(this.bullet);
+            bullet.setPosition(gun.worldPosition);
+            bullet.forward = gun.forward;
+            gun.scene.addChild(bullet);
+            const bulletComponent = bullet.getComponent(Bullet)!;
+            bulletComponent.source = this;
+            const rigidBody = bullet.getComponentInChildren<RigidBody>(RigidBody)!;
+            rigidBody.applyForce(
+                math.Vec3.multiplyScalar(new math.Vec3(), getForward(this.node), 50.0),
+            );
+        }
     }
 
     private _fire() {
@@ -282,5 +312,23 @@ export class MsAmoyController extends Component {
             await waitFor(0.3);
             this._isFiring = false;
         })();
+    }
+
+    private _requestIronSights() {
+        this._ironSights = !this._ironSights;
+        this._animationController.setValue('IronSights', this._ironSights);
+    }
+
+    private _requestCrouch() {
+        this._isCrouching = !this._isCrouching;
+        this._animationController.setValue('Crouching', this._isCrouching);
+    }
+
+    private _jump() {
+        this._animationController.setValue('Jump', true);
+    }
+
+    private _reload() {
+        this._animationController.setValue('Reload', true);
     }
 }

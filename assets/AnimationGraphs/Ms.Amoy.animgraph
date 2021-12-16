@@ -53,9 +53,9 @@
     "__type__": "cc.animation.StateMachine",
     "__editorExtras__": {
       "viewport": {
-        "scale": 1,
-        "top": 138.23749347422273,
-        "left": 398.223444767016
+        "scale": 0.5599999999999996,
+        "top": 34.45391680905539,
+        "left": 195.90530718154668
       }
     },
     "_states": [
