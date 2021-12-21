@@ -152,7 +152,7 @@ export class MsAmoyController extends Component {
     );
 
     private _canMove() {
-        return !this._isFiring && !this._isReactingToHit && this._moveLockerCount === 0;
+        return !this._isReactingToHit && this._moveLockerCount === 0;
     }
 
     private _canFire() {
