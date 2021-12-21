@@ -85,7 +85,7 @@ export class MsAmoyController extends Component {
 
     public lateUpdate() {
         // Reset triggers
-        this._animationController.setValue('Hit', false);
+        // this._animationController.setValue('Hit', false);
         this._animationController.setValue('Jump', false);
         this._animationController.setValue('Reload', false);
     }

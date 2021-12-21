@@ -53,9 +53,9 @@
     "__type__": "cc.animation.StateMachine",
     "__editorExtras__": {
       "viewport": {
-        "scale": 0.6399999999999997,
-        "top": 118.2180988832506,
-        "left": 515.2941420591064
+        "scale": 0.5999999999999996,
+        "top": 160.94570113228121,
+        "left": 211.1418893547061
       }
     },
     "_states": [
@@ -2315,8 +2315,8 @@
     "__editorExtras__": {
       "viewport": {
         "scale": 0.8599999999999999,
-        "top": 141.25303935005383,
-        "left": 149.01392898151425
+        "top": 129.25303935005383,
+        "left": -64.98607101848575
       }
     },
     "_states": [
@@ -3079,6 +3079,13 @@
   },
   {
     "__type__": "cc.animation.StateMachine",
+    "__editorExtras__": {
+      "viewport": {
+        "scale": 1,
+        "top": 49,
+        "left": 174
+      }
+    },
     "_states": [
       {
         "__id__": 262

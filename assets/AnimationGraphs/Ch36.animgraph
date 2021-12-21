@@ -11,19 +11,19 @@
     ],
     "_variables": {
       "Speed": {
-        "__id__": 89
-      },
-      "Attack": {
         "__id__": 90
       },
-      "Combating": {
+      "Attack": {
         "__id__": 91
       },
-      "Hit": {
+      "Combating": {
         "__id__": 92
       },
-      "ProvocativelyAttack": {
+      "Hit": {
         "__id__": 93
+      },
+      "ProvocativelyAttack": {
+        "__id__": 94
       }
     }
   },
@@ -41,9 +41,9 @@
     "__type__": "cc.animation.StateMachine",
     "__editorExtras__": {
       "viewport": {
-        "scale": 0.8199999999999998,
-        "top": -169.39635100842474,
-        "left": -201.71750847387744
+        "scale": 0.7999999999999998,
+        "top": -120.13434643525402,
+        "left": -128.0418224982677
       }
     },
     "_states": [
@@ -74,49 +74,49 @@
     ],
     "_transitions": [
       {
-        "__id__": 43
-      },
-      {
         "__id__": 44
       },
       {
-        "__id__": 48
+        "__id__": 45
       },
       {
-        "__id__": 54
+        "__id__": 49
       },
       {
-        "__id__": 57
+        "__id__": 55
       },
       {
-        "__id__": 60
+        "__id__": 58
       },
       {
-        "__id__": 64
+        "__id__": 61
       },
       {
-        "__id__": 70
+        "__id__": 65
       },
       {
-        "__id__": 72
+        "__id__": 71
       },
       {
         "__id__": 73
       },
       {
-        "__id__": 77
+        "__id__": 74
       },
       {
-        "__id__": 81
+        "__id__": 78
       },
       {
-        "__id__": 83
+        "__id__": 82
       },
       {
-        "__id__": 85
+        "__id__": 84
       },
       {
-        "__id__": 87
+        "__id__": 86
+      },
+      {
+        "__id__": 88
       }
     ],
     "_entryState": {
@@ -375,16 +375,16 @@
     ],
     "_transitions": [
       {
-        "__id__": 37
+        "__id__": 38
       },
       {
-        "__id__": 39
-      },
-      {
-        "__id__": 41
+        "__id__": 40
       },
       {
         "__id__": 42
+      },
+      {
+        "__id__": 43
       }
     ],
     "_entryState": {
@@ -470,14 +470,20 @@
     "_components": [
       {
         "__id__": 34
+      },
+      {
+        "__id__": 35
       }
     ],
     "motion": {
-      "__id__": 35
+      "__id__": 36
     },
     "speed": {
-      "__id__": 36
+      "__id__": 37
     }
+  },
+  {
+    "__type__": "ApplyDamageForMonsterAttack"
   },
   {
     "__type__": "DispatchMonsterEvent",
@@ -509,7 +515,7 @@
     },
     "conditions": [
       {
-        "__id__": 38
+        "__id__": 39
       }
     ]
   },
@@ -527,7 +533,7 @@
     },
     "conditions": [
       {
-        "__id__": 40
+        "__id__": 41
       }
     ]
   },
@@ -583,7 +589,7 @@
     },
     "conditions": [
       {
-        "__id__": 45
+        "__id__": 46
       }
     ],
     "duration": 0,
@@ -595,10 +601,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 4,
     "lhs": {
-      "__id__": 46
+      "__id__": 47
     },
     "rhs": {
-      "__id__": 47
+      "__id__": 48
     }
   },
   {
@@ -621,10 +627,10 @@
     },
     "conditions": [
       {
-        "__id__": 49
+        "__id__": 50
       },
       {
-        "__id__": 52
+        "__id__": 53
       }
     ],
     "duration": 0,
@@ -636,10 +642,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 50
+      "__id__": 51
     },
     "rhs": {
-      "__id__": 51
+      "__id__": 52
     }
   },
   {
@@ -656,7 +662,7 @@
     "__type__": "cc.animation.UnaryCondition",
     "operator": 1,
     "operand": {
-      "__id__": 53
+      "__id__": 54
     }
   },
   {
@@ -674,7 +680,7 @@
     },
     "conditions": [
       {
-        "__id__": 55
+        "__id__": 56
       }
     ],
     "duration": 0.2,
@@ -686,7 +692,7 @@
     "__type__": "cc.animation.UnaryCondition",
     "operator": 0,
     "operand": {
-      "__id__": 56
+      "__id__": 57
     }
   },
   {
@@ -704,7 +710,7 @@
     },
     "conditions": [
       {
-        "__id__": 58
+        "__id__": 59
       }
     ],
     "duration": 0.2,
@@ -716,7 +722,7 @@
     "__type__": "cc.animation.UnaryCondition",
     "operator": 1,
     "operand": {
-      "__id__": 59
+      "__id__": 60
     }
   },
   {
@@ -734,7 +740,7 @@
     },
     "conditions": [
       {
-        "__id__": 61
+        "__id__": 62
       }
     ],
     "duration": 0.2,
@@ -746,10 +752,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 1,
     "lhs": {
-      "__id__": 62
+      "__id__": 63
     },
     "rhs": {
-      "__id__": 63
+      "__id__": 64
     }
   },
   {
@@ -772,10 +778,10 @@
     },
     "conditions": [
       {
-        "__id__": 65
+        "__id__": 66
       },
       {
-        "__id__": 68
+        "__id__": 69
       }
     ],
     "duration": 0.3,
@@ -787,10 +793,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 66
+      "__id__": 67
     },
     "rhs": {
-      "__id__": 67
+      "__id__": 68
     }
   },
   {
@@ -807,7 +813,7 @@
     "__type__": "cc.animation.UnaryCondition",
     "operator": 0,
     "operand": {
-      "__id__": 69
+      "__id__": 70
     }
   },
   {
@@ -825,7 +831,7 @@
     },
     "conditions": [
       {
-        "__id__": 71
+        "__id__": 72
       }
     ],
     "duration": 0.2,
@@ -861,7 +867,7 @@
     },
     "conditions": [
       {
-        "__id__": 74
+        "__id__": 75
       }
     ]
   },
@@ -869,10 +875,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 1,
     "lhs": {
-      "__id__": 75
+      "__id__": 76
     },
     "rhs": {
-      "__id__": 76
+      "__id__": 77
     }
   },
   {
@@ -895,7 +901,7 @@
     },
     "conditions": [
       {
-        "__id__": 78
+        "__id__": 79
       }
     ]
   },
@@ -903,10 +909,10 @@
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
     "lhs": {
-      "__id__": 79
+      "__id__": 80
     },
     "rhs": {
-      "__id__": 80
+      "__id__": 81
     }
   },
   {
@@ -929,7 +935,7 @@
     },
     "conditions": [
       {
-        "__id__": 82
+        "__id__": 83
       }
     ],
     "duration": 0.2,
@@ -951,7 +957,7 @@
     },
     "conditions": [
       {
-        "__id__": 84
+        "__id__": 85
       }
     ],
     "duration": 0.2,
@@ -973,7 +979,7 @@
     },
     "conditions": [
       {
-        "__id__": 86
+        "__id__": 87
       }
     ],
     "duration": 0.2,
@@ -995,7 +1001,7 @@
     },
     "conditions": [
       {
-        "__id__": 88
+        "__id__": 89
       }
     ],
     "duration": 0.2,

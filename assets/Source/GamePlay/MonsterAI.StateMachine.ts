@@ -82,6 +82,8 @@ export enum StateMachineEventType {
     ATTACK_END,
 
     HIT_END,
+
+    ATTACK_APPLY_DAMAGE,
 }
 
 cc.ccenum(StateMachineEventType);
@@ -279,22 +281,6 @@ class AttackState extends State {
             this.context.data._animationController.setValue('Attack', true);
         }
         this._isProvoking = shouldPerformProvocation;
-        if (!shouldPerformProvocation) {
-            const targetEnemy = this.context.data._targetEnemy;
-            if (targetEnemy) {
-                const damageable = targetEnemy.getComponent<Damageable>(Damageable);
-                if (damageable) {
-                    (async () => {
-                        await waitFor(0.5);
-                        damageable.applyDamage({
-                            key: DamageKey.CH36_ATTACK,
-                            source: this.context.component,
-                            direction: getForward(this.context.component.node),
-                        });
-                    })();
-                }
-            }
-        }
     }
 
     public update(deltaTime: number) {
@@ -302,7 +288,21 @@ class AttackState extends State {
     }
 
     public on(type: StateMachineEventType) {
-        if (type === StateMachineEventType.ATTACK_END) {
+        if (type === StateMachineEventType.ATTACK_APPLY_DAMAGE) {
+            if (!this._isProvoking) {
+                const targetEnemy = this.context.data._targetEnemy;
+                if (targetEnemy) {
+                    const damageable = targetEnemy.getComponent<Damageable>(Damageable);
+                    if (damageable) {
+                        damageable.applyDamage({
+                            key: DamageKey.CH36_ATTACK,
+                            source: this.context.component,
+                            direction: getForward(this.context.component.node),
+                        });
+                    }
+                }
+            }
+        } else if (type === StateMachineEventType.ATTACK_END) {
             this.context.stateMachine.transition(AIState.CHASING);
         }
     }
