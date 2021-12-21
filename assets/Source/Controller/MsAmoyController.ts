@@ -46,11 +46,8 @@ export class MsAmoyController extends Component {
             }
         }
 
-        this.joyStick.on(JoystickEventType.MOVE, (joystickDirection: Readonly<math.Vec2>) => {
-            if (!this._canMove()) {
-                return;
-            }
-            this._applyJoystickDirection();
+        this.joyStick.on(JoystickEventType.MOVE, (_joystickDirection: Readonly<math.Vec2>) => {
+            this._hasUnprocessedMoveRequest = true;
         });
 
         this.joyStick.on(JoystickEventType.RELEASE, () => {
@@ -75,6 +72,10 @@ export class MsAmoyController extends Component {
         const { localVelocity } = characterStatus;
 
         if (this._canMove()) {
+            if (this._hasUnprocessedMoveRequest) {
+                this._hasUnprocessedMoveRequest = false;
+                this._applyJoystickDirection();
+            }
             const velocity2D = new math.Vec2(localVelocity.x, localVelocity.z);
             // cc.math.Vec2.normalize(velocity2D, velocity2D);
             this._animationController.setValue('VelocityX', -velocity2D.x);
@@ -117,6 +118,14 @@ export class MsAmoyController extends Component {
         this._animationController.setValue('VelocityY', value);
     }
 
+    public lockMovement() {
+        ++this._moveLockerCount;
+    }
+
+    public unlockMovement() {
+        --this._moveLockerCount;
+    }
+
     @injectComponent(CharacterStatus)
     private _charStatus!: CharacterStatus;
 
@@ -126,6 +135,12 @@ export class MsAmoyController extends Component {
     @injectComponent(Damageable)
     private _damageable!: Damageable;
 
+    private _hasUnprocessedMoveRequest = false;
+
+    /**
+     * Set from state machine.
+     */
+    private _moveLockerCount = 0;
     private _isCrouching = false;
     private _ironSights = false;
     private _turnEnabled = false;
@@ -137,7 +152,7 @@ export class MsAmoyController extends Component {
     );
 
     private _canMove() {
-        return !this._isFiring && !this._isReactingToHit;
+        return !this._isFiring && !this._isReactingToHit && this._moveLockerCount === 0;
     }
 
     private _canFire() {
