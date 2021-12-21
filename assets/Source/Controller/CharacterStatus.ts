@@ -40,6 +40,11 @@ export class CharacterStatus extends cc.Component {
         this._rigidBody = this.node.getComponent(cc.RigidBody) ?? this.node.getComponentInChildren(cc.RigidBody);
     }
 
+    public setVelocityImmediate(value: Readonly<cc.math.Vec3>) {
+        cc.Vec3.copy(this._velocity, value);
+        cc.Vec3.copy(this._targetVelocity, this._velocity);
+    }
+
     public update (deltaTime: number) {
         // deltaTime = 1.0 / 16.0;
         const {

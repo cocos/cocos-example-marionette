@@ -243,7 +243,7 @@ export class MsAmoyController extends Component {
 
         this._isReactingToHit = true;
 
-        this._charStatus.velocity = Vec3.ZERO;
+        this._stopImmediately();
 
         const scheduler = director.getScheduler();
         if (scheduler.isScheduled(this._onHitReactionTimeElapsed, this)) {
@@ -285,6 +285,8 @@ export class MsAmoyController extends Component {
 
     private _fire() {
         this._isFiring = true;
+
+        this._stopImmediately();
 
         const {
             node,
@@ -345,5 +347,9 @@ export class MsAmoyController extends Component {
 
     private _reload() {
         this._animationController.setValue('Reload', true);
+    }
+
+    private _stopImmediately() {
+        this._charStatus.setVelocityImmediate(Vec3.ZERO);
     }
 }
