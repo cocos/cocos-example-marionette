@@ -53,9 +53,9 @@
     "__type__": "cc.animation.StateMachine",
     "__editorExtras__": {
       "viewport": {
-        "scale": 0.6199999999999997,
-        "top": 58.46523187365494,
-        "left": 259.6465768547061
+        "scale": 0.5599999999999996,
+        "top": 58.957545092045734,
+        "left": 443.2600608174642
       }
     },
     "_states": [
@@ -2019,7 +2019,7 @@
       "centerX": -753.7500000000001,
       "centerY": -16.25
     },
-    "name": "",
+    "name": "Jog",
     "algorithm": 0,
     "_items": [
       {
@@ -2314,9 +2314,9 @@
     "__type__": "cc.animation.StateMachine",
     "__editorExtras__": {
       "viewport": {
-        "scale": 0.8399999999999999,
-        "top": 116.32516871051894,
-        "left": -50.63759718127645
+        "scale": 0.6999999999999997,
+        "top": 113.60281575205389,
+        "left": -85.34644306702323
       }
     },
     "_states": [
@@ -2753,7 +2753,7 @@
         "__id__": 231
       }
     ],
-    "duration": 0.2,
+    "duration": 0.1,
     "relativeDuration": false,
     "exitConditionEnabled": false,
     "_exitCondition": 1
@@ -2791,7 +2791,7 @@
         "__id__": 235
       }
     ],
-    "duration": 0.2,
+    "duration": 0.1,
     "relativeDuration": false,
     "exitConditionEnabled": false,
     "_exitCondition": 1
@@ -3882,7 +3882,7 @@
         "__id__": 347
       }
     ],
-    "duration": 0.3,
+    "duration": 0.1,
     "relativeDuration": false,
     "exitConditionEnabled": false,
     "_exitCondition": 1
