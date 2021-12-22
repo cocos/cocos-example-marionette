@@ -53,9 +53,9 @@
     "__type__": "cc.animation.StateMachine",
     "__editorExtras__": {
       "viewport": {
-        "scale": 0.5999999999999996,
-        "top": 160.94570113228121,
-        "left": 211.1418893547061
+        "scale": 0.6199999999999997,
+        "top": 58.46523187365494,
+        "left": 259.6465768547061
       }
     },
     "_states": [
@@ -1773,8 +1773,8 @@
   {
     "__type__": "cc.animation.SubStateMachine",
     "__editorExtras__": {
-      "centerX": -199.19106566648463,
-      "centerY": -482.23245669476
+      "centerX": -100.80396889229098,
+      "centerY": -517.716327662502
     },
     "name": "Jump SM",
     "_components": [],
@@ -1843,8 +1843,8 @@
   {
     "__type__": "cc.animation.State",
     "__editorExtras__": {
-      "centerX": 213.95348837209292,
-      "centerY": 3.4883720930232585
+      "centerX": 332.5581395348836,
+      "centerY": -61.627906976744185
     },
     "name": "Exit"
   },
@@ -1859,8 +1859,8 @@
   {
     "__type__": "cc.animation.Motion",
     "__editorExtras__": {
-      "centerX": 22.843386627906966,
-      "centerY": 50.8604651162791
+      "centerX": -29.48219476744191,
+      "centerY": 95.04651162790702
     },
     "name": "Jump From Stand IronSights",
     "_components": [],
@@ -1994,7 +1994,7 @@
     },
     "conditions": [],
     "duration": 0.4,
-    "relativeDuration": false,
+    "relativeDuration": true,
     "exitConditionEnabled": true,
     "_exitCondition": 0.6
   },
@@ -2187,8 +2187,8 @@
     "__editorExtras__": {
       "viewport": {
         "scale": 0.7999999999999998,
-        "top": -25.284832951128323,
-        "left": -67.28244083975801
+        "top": -18.284832951128323,
+        "left": 170.717559160242
       }
     },
     "_states": [
@@ -2301,8 +2301,8 @@
   {
     "__type__": "cc.animation.SubStateMachine",
     "__editorExtras__": {
-      "centerX": -757.9854744335121,
-      "centerY": -240.21586165772214
+      "centerX": -672.5016034657701,
+      "centerY": -330.5384423028835
     },
     "name": "Idle SM",
     "_components": [],
@@ -2314,9 +2314,9 @@
     "__type__": "cc.animation.StateMachine",
     "__editorExtras__": {
       "viewport": {
-        "scale": 0.8599999999999999,
-        "top": 129.25303935005383,
-        "left": -64.98607101848575
+        "scale": 0.8399999999999999,
+        "top": 116.32516871051894,
+        "left": -50.63759718127645
       }
     },
     "_states": [
@@ -2597,7 +2597,7 @@
         "__id__": 216
       }
     ],
-    "duration": 0.3,
+    "duration": 0.2,
     "relativeDuration": false,
     "exitConditionEnabled": false,
     "_exitCondition": 1
@@ -2619,7 +2619,7 @@
         "__id__": 218
       }
     ],
-    "duration": 0.3,
+    "duration": 0.2,
     "relativeDuration": false,
     "exitConditionEnabled": false,
     "_exitCondition": 1
@@ -2641,7 +2641,7 @@
         "__id__": 220
       }
     ],
-    "duration": 0.3,
+    "duration": 0.2,
     "relativeDuration": false,
     "exitConditionEnabled": false,
     "_exitCondition": 1
@@ -2663,7 +2663,7 @@
         "__id__": 222
       }
     ],
-    "duration": 0.3,
+    "duration": 0.2,
     "relativeDuration": false,
     "exitConditionEnabled": false,
     "_exitCondition": 1
@@ -2753,7 +2753,7 @@
         "__id__": 231
       }
     ],
-    "duration": 0.3,
+    "duration": 0.2,
     "relativeDuration": false,
     "exitConditionEnabled": false,
     "_exitCondition": 1
@@ -2791,7 +2791,7 @@
         "__id__": 235
       }
     ],
-    "duration": 0.3,
+    "duration": 0.2,
     "relativeDuration": false,
     "exitConditionEnabled": false,
     "_exitCondition": 1
@@ -2840,8 +2840,8 @@
     "__editorExtras__": {
       "viewport": {
         "scale": 0.8599999999999999,
-        "top": -99.74696064994617,
-        "left": -360.98607101848575
+        "top": -42.746960649946175,
+        "left": -128.98607101848575
       }
     },
     "_states": [
@@ -3456,7 +3456,7 @@
     ],
     "duration": 0.1,
     "relativeDuration": false,
-    "exitConditionEnabled": true,
+    "exitConditionEnabled": false,
     "_exitCondition": 0.9
   },
   {

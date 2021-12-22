@@ -67,12 +67,32 @@ export class MsAmoyController extends Component {
         input.off(Input.EventType.KEY_UP, this._onKeyUp, this);
     }
 
+    private _lastAnimStatusText = '';
+
     public update () {
         const { _charStatus: characterStatus } = this;
         const { localVelocity } = characterStatus;
 
+        let animStatusText = '';
+        const currentStatus = this._animationController.getCurrentStateStatus(0);
+        if (currentStatus) {
+            animStatusText += `${currentStatus.__DEBUG_ID__ ?? '<unnamed>'}`;
+        }
+        if (this._animationController.getCurrentTransition(0)) {
+            const nextStatus = this._animationController.getNextStateStatus(0);
+            if (nextStatus) {
+                animStatusText += ` -> ${nextStatus.__DEBUG_ID__ ?? '<unnamed>'}`;
+            }
+        }
+
+        if (this._lastAnimStatusText !== animStatusText) {
+            this._lastAnimStatusText = animStatusText;
+            console.log(`Animation status changed: ${animStatusText}`);
+        }
+
         if (this._canMove()) {
             if (this._hasUnprocessedMoveRequest) {
+                console.log(`Apply movement`);
                 this._hasUnprocessedMoveRequest = false;
                 this._applyJoystickDirection();
             }
@@ -120,10 +140,29 @@ export class MsAmoyController extends Component {
 
     public lockMovement() {
         ++this._moveLockerCount;
+        console.log(`Lock movement: ${this._moveLockerCount}`);
+        this._stopImmediately();
     }
 
     public unlockMovement() {
         --this._moveLockerCount;
+        console.log(`Unlock movement: ${this._moveLockerCount}`);
+    }
+
+    public playAttackEffect() {
+        const gun = this.gun;
+        for (let i = 0; i < 10; ++i) {
+            const bullet = instantiate(this.bullet);
+            bullet.setPosition(gun.worldPosition);
+            bullet.forward = gun.forward;
+            gun.scene.addChild(bullet);
+            const bulletComponent = bullet.getComponent(Bullet)!;
+            bulletComponent.source = this;
+            const rigidBody = bullet.getComponentInChildren<RigidBody>(RigidBody)!;
+            rigidBody.applyForce(
+                math.Vec3.multiplyScalar(new math.Vec3(), getForward(this.node), 50.0),
+            );
+        }
     }
 
     @injectComponent(CharacterStatus)
@@ -152,7 +191,7 @@ export class MsAmoyController extends Component {
     );
 
     private _canMove() {
-        return !this._isReactingToHit && this._moveLockerCount === 0;
+        return !this._isFiring && !this._isReactingToHit && this._moveLockerCount === 0;
     }
 
     private _canFire() {
@@ -243,8 +282,6 @@ export class MsAmoyController extends Component {
 
         this._isReactingToHit = true;
 
-        this._stopImmediately();
-
         const scheduler = director.getScheduler();
         if (scheduler.isScheduled(this._onHitReactionTimeElapsed, this)) {
             scheduler.unschedule(this._onHitReactionTimeElapsed, this);
@@ -267,32 +304,18 @@ export class MsAmoyController extends Component {
         }
 
         this._fire();
-
-        const gun = this.gun;
-        for (let i = 0; i < 10; ++i) {
-            const bullet = instantiate(this.bullet);
-            bullet.setPosition(gun.worldPosition);
-            bullet.forward = gun.forward;
-            gun.scene.addChild(bullet);
-            const bulletComponent = bullet.getComponent(Bullet)!;
-            bulletComponent.source = this;
-            const rigidBody = bullet.getComponentInChildren<RigidBody>(RigidBody)!;
-            rigidBody.applyForce(
-                math.Vec3.multiplyScalar(new math.Vec3(), getForward(this.node), 50.0),
-            );
-        }
     }
 
     private _fire() {
         this._isFiring = true;
-
-        this._stopImmediately();
 
         const {
             node,
             gun,
             _rayCastResultPool: pool,
         } = this;
+
+        this._charStatus.velocity = Vec3.ZERO;
 
         this._animationController.setValue('Fire', true);
 
@@ -351,5 +374,6 @@ export class MsAmoyController extends Component {
 
     private _stopImmediately() {
         this._charStatus.setVelocityImmediate(Vec3.ZERO);
+        this._hasUnprocessedMoveRequest = true;
     }
 }

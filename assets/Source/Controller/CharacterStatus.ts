@@ -43,6 +43,7 @@ export class CharacterStatus extends cc.Component {
     public setVelocityImmediate(value: Readonly<cc.math.Vec3>) {
         cc.Vec3.copy(this._velocity, value);
         cc.Vec3.copy(this._targetVelocity, this._velocity);
+        // cc.Vec3.zero(this._acceleration);
     }
 
     public update (deltaTime: number) {

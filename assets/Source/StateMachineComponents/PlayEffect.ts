@@ -1,4 +1,5 @@
 import { _decorator, animation, ParticleSystem } from "cc";
+import { MsAmoyController } from "../Controller/MsAmoyController";
 const { ccclass, property } = _decorator;
 
 /**
@@ -17,6 +18,7 @@ const { ccclass, property } = _decorator;
 export class PlayEffect extends animation.StateMachineComponent {
     
     onMotionStateEnter (controller: animation.AnimationController) {
+        controller.getComponent(MsAmoyController)!.playAttackEffect();
         const component = controller.getComponentInChildren<ParticleSystem>(ParticleSystem);
         if (component) {
             component.clear();
