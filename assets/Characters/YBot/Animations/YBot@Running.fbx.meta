@@ -1,0 +1,79 @@
+{
+  "ver": "2.1.11",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "0cc20120-9801-4e30-9b52-1ac8ea5ba154",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "b84cf": {
+      "importer": "gltf-animation",
+      "uuid": "0cc20120-9801-4e30-9b52-1ac8ea5ba154@b84cf",
+      "displayName": "",
+      "id": "b84cf",
+      "name": "Running.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.699999988079071
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "779fb": {
+      "importer": "gltf-scene",
+      "uuid": "0cc20120-9801-4e30-9b52-1ac8ea5ba154@779fb",
+      "displayName": "",
+      "id": "779fb",
+      "name": "YBot@Running.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "animationImportSettings": [
+      {
+        "name": "mixamo.com",
+        "duration": 0.699999988079071,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Running",
+            "from": 0,
+            "to": 0.699999988079071,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "0cc20120-9801-4e30-9b52-1ac8ea5ba154@779fb",
+    "assetFinder": {
+      "meshes": [],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "0cc20120-9801-4e30-9b52-1ac8ea5ba154@779fb"
+      ]
+    }
+  }
+}

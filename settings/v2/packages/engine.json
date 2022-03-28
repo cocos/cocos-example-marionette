@@ -1,23 +1,25 @@
 {
-  "__version__": "1.0.5",
+  "__version__": "1.0.6",
   "modules": {
     "includeModules": [
+      "2d",
+      "3d",
+      "animation",
+      "audio",
       "base",
       "gfx-webgl",
       "gfx-webgl2",
-      "3d",
-      "2d",
-      "ui",
+      "marionette",
       "particle",
       "physics-physx",
       "primitive",
       "profiler",
-      "audio",
-      "video",
-      "webview",
-      "tween",
+      "skeletal-animation",
       "terrain",
-      "marionette"
+      "tween",
+      "ui",
+      "video",
+      "webview"
     ],
     "flags": {
       "2d": {
@@ -115,6 +117,12 @@
         "_value": false
       },
       "marionette": {
+        "_value": true
+      },
+      "animation": {
+        "_value": true
+      },
+      "skeletal-animation": {
         "_value": true
       }
     },
