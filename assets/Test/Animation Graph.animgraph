@@ -11,7 +11,7 @@
     ],
     "_variables": {
       "Blend": {
-        "__id__": 17
+        "__id__": 16
       }
     }
   },
@@ -43,7 +43,7 @@
     ],
     "_transitions": [
       {
-        "__id__": 16
+        "__id__": 15
       }
     ],
     "_entryState": {
@@ -83,9 +83,7 @@
     "motion": {
       "__id__": 7
     },
-    "speed": {
-      "__id__": 15
-    }
+    "speed": 1
   },
   {
     "__type__": "cc.animation.AnimationBlend1D",
@@ -175,11 +173,6 @@
     "value": 0
   },
   {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 1
-  },
-  {
     "__type__": "cc.animation.Transition",
     "from": {
       "__id__": 3
@@ -190,7 +183,7 @@
     "conditions": []
   },
   {
-    "__type__": "cc.animation.Variable",
+    "__type__": "cc.animation.PlainVariable",
     "_type": 0,
     "_value": -0.5
   }
