@@ -1,0 +1,79 @@
+{
+  "ver": "2.1.11",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "20769cd3-0267-4fcf-908d-a3422d5bf29b",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "1a4f5": {
+      "importer": "gltf-animation",
+      "uuid": "20769cd3-0267-4fcf-908d-a3422d5bf29b@1a4f5",
+      "displayName": "",
+      "id": "1a4f5",
+      "name": "Walking Backward.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.2333333492279053
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "bc24f": {
+      "importer": "gltf-scene",
+      "uuid": "20769cd3-0267-4fcf-908d-a3422d5bf29b@bc24f",
+      "displayName": "",
+      "id": "bc24f",
+      "name": "YBot@Walking Backward.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "animationImportSettings": [
+      {
+        "name": "mixamo.com",
+        "duration": 1.2333333492279053,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Walking Backward",
+            "from": 0,
+            "to": 1.2333333492279053,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "20769cd3-0267-4fcf-908d-a3422d5bf29b@bc24f",
+    "assetFinder": {
+      "meshes": [],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "20769cd3-0267-4fcf-908d-a3422d5bf29b@bc24f"
+      ]
+    }
+  }
+}

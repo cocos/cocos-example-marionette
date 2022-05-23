@@ -1,0 +1,79 @@
+{
+  "ver": "2.1.11",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "3d4f40c9-ace0-42d6-a2a8-b5edaf1516fa",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "5a43d": {
+      "importer": "gltf-animation",
+      "uuid": "3d4f40c9-ace0-42d6-a2a8-b5edaf1516fa@5a43d",
+      "displayName": "",
+      "id": "5a43d",
+      "name": "Talking On A Cell Phone.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 37.233333587646484
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "2a070": {
+      "importer": "gltf-scene",
+      "uuid": "3d4f40c9-ace0-42d6-a2a8-b5edaf1516fa@2a070",
+      "displayName": "",
+      "id": "2a070",
+      "name": "YBot@Talking On A Cell Phone.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "animationImportSettings": [
+      {
+        "name": "mixamo.com",
+        "duration": 37.233333587646484,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Talking On A Cell Phone",
+            "from": 0,
+            "to": 37.233333587646484,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "3d4f40c9-ace0-42d6-a2a8-b5edaf1516fa@2a070",
+    "assetFinder": {
+      "meshes": [],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "3d4f40c9-ace0-42d6-a2a8-b5edaf1516fa@2a070"
+      ]
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "ver": "2.1.11",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "9c5aa7d8-76f8-4d0b-8a5f-f2fba26432e7",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "f4113": {
+      "importer": "gltf-animation",
+      "uuid": "9c5aa7d8-76f8-4d0b-8a5f-f2fba26432e7@f4113",
+      "displayName": "",
+      "id": "f4113",
+      "name": "Jump.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 2.1666667461395264
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "a3142": {
+      "importer": "gltf-scene",
+      "uuid": "9c5aa7d8-76f8-4d0b-8a5f-f2fba26432e7@a3142",
+      "displayName": "",
+      "id": "a3142",
+      "name": "YBot@Jump.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "animationImportSettings": [
+      {
+        "name": "mixamo.com",
+        "duration": 2.1666667461395264,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Jump",
+            "from": 0,
+            "to": 2.1666667461395264,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "9c5aa7d8-76f8-4d0b-8a5f-f2fba26432e7@a3142",
+    "assetFinder": {
+      "meshes": [],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "9c5aa7d8-76f8-4d0b-8a5f-f2fba26432e7@a3142"
+      ]
+    }
+  }
+}

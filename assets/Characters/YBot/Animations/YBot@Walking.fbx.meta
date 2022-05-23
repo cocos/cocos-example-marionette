@@ -1,0 +1,79 @@
+{
+  "ver": "2.1.11",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "3b997e4a-0567-4331-88c5-464d464bf9b6",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "dc888": {
+      "importer": "gltf-animation",
+      "uuid": "3b997e4a-0567-4331-88c5-464d464bf9b6@dc888",
+      "displayName": "",
+      "id": "dc888",
+      "name": "Walking.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.0333333015441895
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "cda37": {
+      "importer": "gltf-scene",
+      "uuid": "3b997e4a-0567-4331-88c5-464d464bf9b6@cda37",
+      "displayName": "",
+      "id": "cda37",
+      "name": "YBot@Walking.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "animationImportSettings": [
+      {
+        "name": "mixamo.com",
+        "duration": 1.0333333015441895,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Walking",
+            "from": 0,
+            "to": 1.0333333015441895,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "3b997e4a-0567-4331-88c5-464d464bf9b6@cda37",
+    "assetFinder": {
+      "meshes": [],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "3b997e4a-0567-4331-88c5-464d464bf9b6@cda37"
+      ]
+    }
+  }
+}

@@ -20,6 +20,5 @@ export class RandomIdle extends animation.StateMachineComponent {
         const idleShuffle = Math.random();
         controller.setValue('IdleShuffle', idleShuffle);
         console.debug(idleShuffle);
-        controller.setValue('Idling', true);
     }
 }
