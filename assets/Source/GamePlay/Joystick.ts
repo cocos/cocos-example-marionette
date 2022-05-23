@@ -1,6 +1,7 @@
 
 
 import * as cc from 'cc';
+import { HTML5 } from 'cc/env';
 import { useMouseInput } from '../Utils/Env';
 
 export enum JoystickEventType {
@@ -56,6 +57,13 @@ export class Joystick extends cc.Eventify(cc.Component) {
             cc.input.on(cc.Input.EventType.MOUSE_UP, () => {
                 this._onClickOrTouchEnd();
             });
+            if (HTML5) {
+                document.addEventListener('pointerlockchange', () => {
+                    if (document.pointerLockElement !== cc.game.canvas) {
+                        this._onClickOrTouchEnd();
+                    }
+                });
+            }
         } else {
             this.node.on(cc.Node.EventType.TOUCH_START, this._onThisNodeTouchStart, this);
             this.node.on(cc.Node.EventType.TOUCH_END, this._onThisNodeTouchEnd, this);
@@ -145,7 +153,13 @@ export class Joystick extends cc.Eventify(cc.Component) {
         this._bar.setPosition(localPosition);
         this._background.setPosition(localPosition);
         this._pressing = true;
-        cc.game.canvas?.requestPointerLock?.();
+        const maybePromise = cc.game.canvas?.requestPointerLock?.() as Promise<unknown> | undefined;
+        if (maybePromise instanceof Promise) {
+            // I've heard `requestPointerLock()` returns promise on Chrome
+            // and the promise may be rejected if ESC is pressed.
+            // Let's capture this just in case.
+            maybePromise.catch((reason) => cc.debug(`requestPointerLock() is rejected: ${reason}`));
+        }
         this.emit(JoystickEventType.PRESS);
     }
 
