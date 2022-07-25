@@ -1,5 +1,5 @@
 {
-  "ver": "2.1.11",
+  "ver": "2.3.0",
   "importer": "fbx",
   "imported": true,
   "uuid": "f057b5bc-7bf5-421c-8927-c6c92fdcbd9d",
@@ -76,7 +76,8 @@
       ]
     },
     "fbx": {
-      "preferLocalTimeSpan": false
+      "preferLocalTimeSpan": false,
+      "smartMaterialEnabled": false
     }
   }
 }

@@ -4,8 +4,8 @@
   "imported": true,
   "uuid": "1bee0183-9e29-45e3-a384-b95b0d8439ce",
   "files": [
-    ".ps1",
-    ".json"
+    ".json",
+    ".ps1"
   ],
   "subMetas": {},
   "userData": {}

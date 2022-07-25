@@ -1,5 +1,5 @@
 {
-  "ver": "2.1.11",
+  "ver": "2.3.0",
   "importer": "fbx",
   "imported": true,
   "uuid": "717f3286-acc8-426a-b744-eff4dda0326f",
@@ -40,7 +40,7 @@
         "isUuid": false,
         "imageUuidOrDatabaseUri": "db://assets/Characters/Ms.Amoy/Cocos/Materials/T_Hero_Head_N.png"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -75,8 +75,8 @@
       "ver": "1.0.3",
       "imported": true,
       "files": [
-        ".png",
-        ".json"
+        ".json",
+        ".png"
       ],
       "subMetas": {}
     },
@@ -166,8 +166,8 @@
       "ver": "1.0.3",
       "imported": true,
       "files": [
-        ".png",
-        ".json"
+        ".json",
+        ".png"
       ],
       "subMetas": {}
     },
@@ -183,8 +183,8 @@
       "ver": "1.0.3",
       "imported": true,
       "files": [
-        ".png",
-        ".json"
+        ".json",
+        ".png"
       ],
       "subMetas": {}
     },
@@ -200,8 +200,8 @@
       "ver": "1.0.3",
       "imported": true,
       "files": [
-        ".png",
-        ".json"
+        ".json",
+        ".png"
       ],
       "subMetas": {}
     },
@@ -221,7 +221,7 @@
         "isUuid": false,
         "imageUuidOrDatabaseUri": "db://assets/Characters/Ms.Amoy/Cocos/Materials/T_Hero_Body_BC.png"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -244,7 +244,7 @@
         "isUuid": false,
         "imageUuidOrDatabaseUri": "db://assets/Characters/Ms.Amoy/Cocos/Materials/T_Hero_Body_N.png"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -267,7 +267,7 @@
         "isUuid": false,
         "imageUuidOrDatabaseUri": "db://assets/Characters/Ms.Amoy/Cocos/Materials/T_Hero_Head_BC.png"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -290,7 +290,7 @@
         "isUuid": true,
         "imageUuidOrDatabaseUri": "717f3286-acc8-426a-b744-eff4dda0326f@b5136"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -313,7 +313,7 @@
         "isUuid": true,
         "imageUuidOrDatabaseUri": "717f3286-acc8-426a-b744-eff4dda0326f@80036"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -336,7 +336,7 @@
         "isUuid": true,
         "imageUuidOrDatabaseUri": "717f3286-acc8-426a-b744-eff4dda0326f@6cf58"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -359,7 +359,7 @@
         "isUuid": true,
         "imageUuidOrDatabaseUri": "717f3286-acc8-426a-b744-eff4dda0326f@2150c"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -382,7 +382,7 @@
         "isUuid": false,
         "imageUuidOrDatabaseUri": "db://assets/Characters/Ms.Amoy/Cocos/Materials/T_gun03_BC.png"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -558,7 +558,8 @@
       ]
     },
     "fbx": {
-      "preferLocalTimeSpan": false
+      "preferLocalTimeSpan": false,
+      "smartMaterialEnabled": false
     }
   }
 }

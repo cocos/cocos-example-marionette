@@ -1,11 +1,11 @@
 {
-  "ver": "1.0.23",
+  "ver": "1.0.24",
   "importer": "image",
   "imported": true,
   "uuid": "20c592f0-fae6-4374-af86-11164d5dc1b1",
   "files": [
-    ".png",
-    ".json"
+    ".json",
+    ".png"
   ],
   "subMetas": {
     "b47c0": {
@@ -40,8 +40,8 @@
           "ver": "1.0.0",
           "imported": true,
           "files": [
-            ".png",
-            ".json"
+            ".json",
+            ".png"
           ],
           "subMetas": {}
         },
@@ -55,8 +55,8 @@
           "ver": "1.0.0",
           "imported": true,
           "files": [
-            ".png",
-            ".json"
+            ".json",
+            ".png"
           ],
           "subMetas": {}
         },
@@ -70,8 +70,8 @@
           "ver": "1.0.0",
           "imported": true,
           "files": [
-            ".png",
-            ".json"
+            ".json",
+            ".png"
           ],
           "subMetas": {}
         },
@@ -85,8 +85,8 @@
           "ver": "1.0.0",
           "imported": true,
           "files": [
-            ".png",
-            ".json"
+            ".json",
+            ".png"
           ],
           "subMetas": {}
         },
@@ -100,8 +100,8 @@
           "ver": "1.0.0",
           "imported": true,
           "files": [
-            ".png",
-            ".json"
+            ".json",
+            ".png"
           ],
           "subMetas": {}
         },
@@ -115,8 +115,8 @@
           "ver": "1.0.0",
           "imported": true,
           "files": [
-            ".png",
-            ".json"
+            ".json",
+            ".png"
           ],
           "subMetas": {}
         }

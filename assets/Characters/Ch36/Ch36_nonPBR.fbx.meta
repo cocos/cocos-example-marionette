@@ -1,5 +1,5 @@
 {
-  "ver": "2.1.11",
+  "ver": "2.3.0",
   "importer": "fbx",
   "imported": true,
   "uuid": "c9991e75-068a-4084-863f-dcae75c648fc",
@@ -76,8 +76,8 @@
       "ver": "1.0.3",
       "imported": true,
       "files": [
-        ".png",
-        ".json"
+        ".json",
+        ".png"
       ],
       "subMetas": {}
     },
@@ -93,8 +93,8 @@
       "ver": "1.0.3",
       "imported": true,
       "files": [
-        ".png",
-        ".json"
+        ".json",
+        ".png"
       ],
       "subMetas": {}
     },
@@ -114,7 +114,7 @@
         "isUuid": true,
         "imageUuidOrDatabaseUri": "c9991e75-068a-4084-863f-dcae75c648fc@adacb"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -137,7 +137,7 @@
         "isUuid": true,
         "imageUuidOrDatabaseUri": "c9991e75-068a-4084-863f-dcae75c648fc@612f0"
       },
-      "ver": "1.0.21",
+      "ver": "1.0.22",
       "imported": true,
       "files": [
         ".json"
@@ -224,7 +224,8 @@
       ]
     },
     "fbx": {
-      "preferLocalTimeSpan": false
+      "preferLocalTimeSpan": false,
+      "smartMaterialEnabled": false
     }
   }
 }
