@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, animation, math, input, Input, Touch, EventTouch, EventMouse, systemEvent, SystemEvent, sys, Prefab, instantiate, RigidBody, PhysicsSystem, RecyclePool, physics, geometry, director, Vec3, EventKeyboard, KeyCode } from 'cc';
+import { _decorator, Component, Node, animation, math, input, Input, Touch, EventTouch, EventMouse, systemEvent, SystemEvent, sys, Prefab, instantiate, RigidBody, PhysicsSystem, RecyclePool, physics, geometry, director, Vec3, EventKeyboard, KeyCode, Vec2 } from 'cc';
 import { Damageable } from '../GamePlay/Damage/Damagable';
 import { Damage } from '../GamePlay/Damage/Damage';
 import { Joystick, JoystickEventType } from '../GamePlay/Joystick';
@@ -11,6 +11,8 @@ const { ccclass, property } = _decorator;
 import { DamageKey, DAMAGE_TABLE } from '../GamePlay/Damage/DamageTable';
 import { waitFor } from '../Utils/Misc';
 import { Bullet } from '../GamePlay/Bullet';
+import { globalInputManager } from '../Input/Input';
+import { PredefinedActionId, PredefinedAxisId } from '../Input/Predefined';
 
 @ccclass('MsAmoyController')
 export class MsAmoyController extends Component {
@@ -57,19 +59,15 @@ export class MsAmoyController extends Component {
         this._damageable.on(Damageable.EventType.DAMAGE, (damage: Damage) => {
             this._onDamaged(damage);
         });
-
-        input.on(Input.EventType.KEY_UP, this._onKeyUp, this);
     }
 
     public onDestroy() {
         MsAmoyController.instance = null;
-
-        input.off(Input.EventType.KEY_UP, this._onKeyUp, this);
     }
 
     private _lastAnimStatusText = '';
 
-    public update () {
+    public update (deltaTime: number) {
         const { _charStatus: characterStatus } = this;
         const { localVelocity } = characterStatus;
 
@@ -90,7 +88,16 @@ export class MsAmoyController extends Component {
             console.log(`Animation status changed: ${animStatusText}`);
         }
 
+        if (this._isAiming) {
+            if (this._aimingTimer > 5.0) {
+                this._isAiming = false;
+            } else {
+                this._aimingTimer += deltaTime;
+            }
+        }
+
         if (this._canMove()) {
+            this._applyInputVelocity();
             if (this._hasUnprocessedMoveRequest) {
                 console.log(`Apply movement`);
                 this._hasUnprocessedMoveRequest = false;
@@ -101,9 +108,30 @@ export class MsAmoyController extends Component {
             this._animationController.setValue('VelocityX', -velocity2D.x);
             this._animationController.setValue('VelocityY', velocity2D.y);
         }
+
+        if (globalInputManager.getAction(PredefinedActionId.Fire)) {
+            this._requestFire();
+        }
+
+        if (globalInputManager.getAction(PredefinedActionId.IronSights)) {
+            this._requestIronSights();
+        }
+
+        if (globalInputManager.getAction(PredefinedActionId.Jump)) {
+            this._jump();
+        }
+
+        if (globalInputManager.getAction(PredefinedActionId.Reload)) {
+            this._reload();
+        }
+
+        if (globalInputManager.getAction(PredefinedActionId.Crouch)) {
+            this._requestCrouch();
+        }
     }
 
     public lateUpdate() {
+        this._animationController.setValue('Aiming', this._isAiming);
         // Reset triggers
         // this._animationController.setValue('Hit', false);
         this._animationController.setValue('Jump', false);
@@ -180,6 +208,8 @@ export class MsAmoyController extends Component {
      * Set from state machine.
      */
     private _moveLockerCount = 0;
+    private _isAiming = false;
+    private _aimingTimer = 0.0;
     private _isCrouching = false;
     private _ironSights = false;
     private _turnEnabled = false;
@@ -202,6 +232,20 @@ export class MsAmoyController extends Component {
         const { joyStick: { direction: joystickDirection } } = this;
         const baseSpeed = this._ironSights ? 1.0 : 2.0;
         const velocity = new math.Vec3(-joystickDirection.x, 0.0, joystickDirection.y);
+        math.Vec3.normalize(velocity, velocity);
+        math.Vec3.multiplyScalar(velocity, velocity, baseSpeed);
+        this._charStatus.localVelocity = velocity;
+    }
+
+    private _applyInputVelocity() {
+        const inputVelocity = new Vec2(
+            globalInputManager.getAxisValue(PredefinedAxisId.MoveRight),
+            globalInputManager.getAxisValue(PredefinedAxisId.MoveForward),
+        );
+
+        const baseSpeed = this._ironSights ? 1.0 : 2.0;
+
+        const velocity = new math.Vec3(-inputVelocity.x, 0.0, inputVelocity.y);
         math.Vec3.normalize(velocity, velocity);
         math.Vec3.multiplyScalar(velocity, velocity, baseSpeed);
         this._charStatus.localVelocity = velocity;
@@ -257,26 +301,6 @@ export class MsAmoyController extends Component {
         }
     }
 
-    private _onKeyUp(event: EventKeyboard) {
-        switch (event.keyCode) {
-            case KeyCode.KEY_A:
-                this._requestFire();
-                break;
-            case KeyCode.KEY_Q:
-                this._requestIronSights();
-                break;
-            case KeyCode.SPACE:
-                this._jump();
-                break;
-            case KeyCode.KEY_R:
-                this._reload();
-                break;
-            case KeyCode.KEY_C:
-                this._requestCrouch();
-                break;
-        }
-    }
-
     private _onDamaged(damage: Damage) {
         this._animationController.setValue('Hit', true);
 
@@ -308,6 +332,9 @@ export class MsAmoyController extends Component {
 
     private _fire() {
         this._isFiring = true;
+
+        this._isAiming = true;
+        this._aimingTimer = 0.0;
 
         const {
             node,
