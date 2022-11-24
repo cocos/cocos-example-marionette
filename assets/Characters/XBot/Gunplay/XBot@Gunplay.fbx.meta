@@ -1,0 +1,83 @@
+{
+  "ver": "2.3.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "c881af0a-07b8-4b59-9c3f-6409273b1186",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "cee21": {
+      "importer": "gltf-animation",
+      "uuid": "c881af0a-07b8-4b59-9c3f-6409273b1186@cee21",
+      "displayName": "",
+      "id": "cee21",
+      "name": "Gunplay.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.20000000298023224
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "a6e59": {
+      "importer": "gltf-scene",
+      "uuid": "c881af0a-07b8-4b59-9c3f-6409273b1186@a6e59",
+      "displayName": "",
+      "id": "a6e59",
+      "name": "XBot@Gunplay.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "allowMeshDataAccess": true,
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "animationImportSettings": [
+      {
+        "name": "mixamo.com",
+        "duration": 0.20000000298023224,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Gunplay",
+            "from": 0,
+            "to": 0.20000000298023224,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "c881af0a-07b8-4b59-9c3f-6409273b1186@a6e59",
+    "assetFinder": {
+      "meshes": [],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "c881af0a-07b8-4b59-9c3f-6409273b1186@a6e59"
+      ]
+    }
+  }
+}

@@ -1,0 +1,48 @@
+[
+  {
+    "__type__": "cc.animation.AnimationGraphVariant",
+    "_name": "",
+    "_objFlags": 0,
+    "_native": "",
+    "_graph": {
+      "__uuid__": "4f7de476-c1ea-4d87-b541-b9e2e7a3296e",
+      "__expectedType__": "cc.animation.AnimationGraph"
+    },
+    "_clipOverrides": {
+      "__id__": 1
+    }
+  },
+  {
+    "__type__": "cc.animation.ClipOverrideMap",
+    "_entries": [
+      {
+        "__id__": 2
+      },
+      {
+        "__id__": 3
+      }
+    ]
+  },
+  {
+    "__type__": "cc.animation.ClipOverrideEntry",
+    "original": {
+      "__uuid__": "1f445a92-65e8-4092-82b9-0e505dbb4e4d@c89bd",
+      "__expectedType__": "cc.AnimationClip"
+    },
+    "substitution": {
+      "__uuid__": "c4ae1534-2b03-49d0-b1ee-c58d546d95b4@fd8a6",
+      "__expectedType__": "cc.AnimationClip"
+    }
+  },
+  {
+    "__type__": "cc.animation.ClipOverrideEntry",
+    "original": {
+      "__uuid__": "e20aa2d3-9ffd-40d3-8cf2-f1f59a77e67f@374d0",
+      "__expectedType__": "cc.AnimationClip"
+    },
+    "substitution": {
+      "__uuid__": "3b997e4a-0567-4331-88c5-464d464bf9b6@dc888",
+      "__expectedType__": "cc.AnimationClip"
+    }
+  }
+]

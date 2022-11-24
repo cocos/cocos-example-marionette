@@ -4,6 +4,7 @@
 
   /* Add your custom configuration here. */
   "compilerOptions": {
+    "target": "ES2019",
     "strict": true
   }
 }

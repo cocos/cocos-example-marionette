@@ -1,0 +1,81 @@
+{
+  "ver": "2.3.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "e20aa2d3-9ffd-40d3-8cf2-f1f59a77e67f",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "374d0": {
+      "importer": "gltf-animation",
+      "uuid": "e20aa2d3-9ffd-40d3-8cf2-f1f59a77e67f@374d0",
+      "displayName": "",
+      "id": "374d0",
+      "name": "Ninja Run.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.6333333253860474
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "3d089": {
+      "importer": "gltf-scene",
+      "uuid": "e20aa2d3-9ffd-40d3-8cf2-f1f59a77e67f@3d089",
+      "displayName": "",
+      "id": "3d089",
+      "name": "XBot@Ninja Run.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "animationImportSettings": [
+      {
+        "name": "mixamo.com",
+        "duration": 0.6333333253860474,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Ninja Run",
+            "from": 0,
+            "to": 0.6333333253860474,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "e20aa2d3-9ffd-40d3-8cf2-f1f59a77e67f@3d089",
+    "assetFinder": {
+      "meshes": [],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "e20aa2d3-9ffd-40d3-8cf2-f1f59a77e67f@3d089"
+      ]
+    }
+  }
+}
