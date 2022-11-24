@@ -1,0 +1,81 @@
+{
+  "ver": "2.3.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "1a80417a-a821-44b7-8b95-48d78e66b53e",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "c06a9": {
+      "importer": "gltf-animation",
+      "uuid": "1a80417a-a821-44b7-8b95-48d78e66b53e@c06a9",
+      "displayName": "",
+      "id": "c06a9",
+      "name": "Ninja Idle 2.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 9.166666984558105
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "b6823": {
+      "importer": "gltf-scene",
+      "uuid": "1a80417a-a821-44b7-8b95-48d78e66b53e@b6823",
+      "displayName": "",
+      "id": "b6823",
+      "name": "XBot@Ninja Idle 2.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "animationImportSettings": [
+      {
+        "name": "mixamo.com",
+        "duration": 9.166666984558105,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Ninja Idle 2",
+            "from": 0,
+            "to": 9.166666984558105,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "1a80417a-a821-44b7-8b95-48d78e66b53e@b6823",
+    "assetFinder": {
+      "meshes": [],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "1a80417a-a821-44b7-8b95-48d78e66b53e@b6823"
+      ]
+    }
+  }
+}

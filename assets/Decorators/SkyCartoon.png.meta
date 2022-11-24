@@ -1,5 +1,5 @@
 {
-  "ver": "1.0.24",
+  "ver": "1.0.25",
   "importer": "image",
   "imported": true,
   "uuid": "20c592f0-fae6-4374-af86-11164d5dc1b1",
@@ -22,7 +22,7 @@
         "mipfilter": "linear",
         "anisotropy": 0,
         "isRGBE": false,
-        "imageDatabaseUri": "db://assets/Decorators/SkyCartoon.png"
+        "imageDatabaseUri": "20c592f0-fae6-4374-af86-11164d5dc1b1"
       },
       "ver": "1.0.10",
       "imported": true,

@@ -1,5 +1,5 @@
 {
-  "__version__": "1.0.6",
+  "__version__": "1.0.7",
   "modules": {
     "includeModules": [
       "2d",
@@ -9,6 +9,7 @@
       "base",
       "gfx-webgl",
       "gfx-webgl2",
+      "light-probe",
       "marionette",
       "particle",
       "physics-physx",
@@ -19,6 +20,7 @@
       "tween",
       "ui",
       "video",
+      "websocket",
       "webview"
     ],
     "flags": {

@@ -1,0 +1,81 @@
+{
+  "ver": "2.3.2",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "fce78d03-a78c-497c-ba4b-fd65f0a9f6b3",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "8649c": {
+      "importer": "gltf-animation",
+      "uuid": "fce78d03-a78c-497c-ba4b-fd65f0a9f6b3@8649c",
+      "displayName": "",
+      "id": "8649c",
+      "name": "Slow Run.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.7333333492279053
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "e5087": {
+      "importer": "gltf-scene",
+      "uuid": "fce78d03-a78c-497c-ba4b-fd65f0a9f6b3@e5087",
+      "displayName": "",
+      "id": "e5087",
+      "name": "XBot@Slow Run.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "animationImportSettings": [
+      {
+        "name": "mixamo.com",
+        "duration": 0.7333333492279053,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "Slow Run",
+            "from": 0,
+            "to": 0.7333333492279053,
+            "wrapMode": 2
+          }
+        ]
+      }
+    ],
+    "redirect": "fce78d03-a78c-497c-ba4b-fd65f0a9f6b3@e5087",
+    "assetFinder": {
+      "meshes": [],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "fce78d03-a78c-497c-ba4b-fd65f0a9f6b3@e5087"
+      ]
+    }
+  }
+}
