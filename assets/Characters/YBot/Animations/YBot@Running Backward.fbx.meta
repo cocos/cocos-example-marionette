@@ -1,5 +1,5 @@
 {
-  "ver": "2.3.2",
+  "ver": "2.3.8",
   "importer": "fbx",
   "imported": true,
   "uuid": "08d1cae9-5938-4271-a3c9-1e11e91e9f0a",
@@ -39,7 +39,7 @@
       "userData": {
         "gltfIndex": 0
       },
-      "ver": "1.0.12",
+      "ver": "1.0.13",
       "imported": true,
       "files": [
         ".json"
@@ -60,7 +60,8 @@
             "name": "Running Backward",
             "from": 0,
             "to": 0.6333333253860474,
-            "wrapMode": 2
+            "wrapMode": 2,
+            "previousId": "ac6ab"
           }
         ]
       }
@@ -76,7 +77,27 @@
       ]
     },
     "fbx": {
-      "smartMaterialEnabled": false
+      "smartMaterialEnabled": false,
+      "matchMeshNames": false
+    },
+    "mountAllAnimationsOnPrefab": true,
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
     }
   }
 }

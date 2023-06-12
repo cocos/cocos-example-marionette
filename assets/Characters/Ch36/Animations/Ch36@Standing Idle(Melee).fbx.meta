@@ -1,5 +1,5 @@
 {
-  "ver": "2.3.2",
+  "ver": "2.3.8",
   "importer": "fbx",
   "imported": true,
   "uuid": "f057b5bc-7bf5-421c-8927-c6c92fdcbd9d",
@@ -39,7 +39,7 @@
       "userData": {
         "gltfIndex": 0
       },
-      "ver": "1.0.12",
+      "ver": "1.0.13",
       "imported": true,
       "files": [
         ".json"
@@ -60,7 +60,8 @@
             "name": "Standing Idle(Melee)",
             "from": 0,
             "to": 1.8333333730697632,
-            "wrapMode": 2
+            "wrapMode": 2,
+            "previousId": "c5924"
           }
         ]
       }
@@ -77,7 +78,27 @@
     },
     "fbx": {
       "preferLocalTimeSpan": false,
-      "smartMaterialEnabled": false
+      "smartMaterialEnabled": false,
+      "matchMeshNames": false
+    },
+    "mountAllAnimationsOnPrefab": true,
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
     }
   }
 }

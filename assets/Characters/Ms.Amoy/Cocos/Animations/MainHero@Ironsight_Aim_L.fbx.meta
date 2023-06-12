@@ -1,5 +1,5 @@
 {
-  "ver": "2.3.2",
+  "ver": "2.3.8",
   "importer": "fbx",
   "imported": true,
   "uuid": "717f3286-acc8-426a-b744-eff4dda0326f",
@@ -70,7 +70,10 @@
       "id": "80036",
       "name": "SM_MainHero_baked:T_Hair_C.image",
       "userData": {
-        "gltfIndex": 5
+        "gltfIndex": 5,
+        "fixAlphaTransparencyArtifacts": true,
+        "hasAlpha": true,
+        "type": "texture"
       },
       "ver": "1.0.3",
       "imported": true,
@@ -87,9 +90,10 @@
       "id": "1efe6",
       "name": "SM_MainHero_Material0.mesh",
       "userData": {
-        "gltfIndex": 0
+        "gltfIndex": 0,
+        "triangleCount": 30730
       },
-      "ver": "1.1.0",
+      "ver": "1.1.1",
       "imported": true,
       "files": [
         ".bin",
@@ -104,9 +108,10 @@
       "id": "a11d0",
       "name": "SM_Gun03.mesh",
       "userData": {
-        "gltfIndex": 1
+        "gltfIndex": 1,
+        "triangleCount": 3705
       },
-      "ver": "1.1.0",
+      "ver": "1.1.1",
       "imported": true,
       "files": [
         ".bin",
@@ -161,7 +166,10 @@
       "id": "b5136",
       "name": "SM_MainHero_baked:T_Hair_thin_alpha1.image",
       "userData": {
-        "gltfIndex": 4
+        "gltfIndex": 4,
+        "fixAlphaTransparencyArtifacts": true,
+        "hasAlpha": true,
+        "type": "texture"
       },
       "ver": "1.0.3",
       "imported": true,
@@ -178,7 +186,10 @@
       "id": "6cf58",
       "name": "SM_MainHero_baked:T_Hair_thin_A.image",
       "userData": {
-        "gltfIndex": 6
+        "gltfIndex": 6,
+        "fixAlphaTransparencyArtifacts": true,
+        "hasAlpha": true,
+        "type": "texture"
       },
       "ver": "1.0.3",
       "imported": true,
@@ -195,7 +206,10 @@
       "id": "2150c",
       "name": "SM_MainHero_baked:T_Hair_Tthin_A.image",
       "userData": {
-        "gltfIndex": 7
+        "gltfIndex": 7,
+        "fixAlphaTransparencyArtifacts": true,
+        "hasAlpha": true,
+        "type": "texture"
       },
       "ver": "1.0.3",
       "imported": true,
@@ -462,7 +476,7 @@
       "userData": {
         "gltfIndex": 0
       },
-      "ver": "1.0.12",
+      "ver": "1.0.13",
       "imported": true,
       "files": [
         ".json"
@@ -520,7 +534,8 @@
             "name": "Ironsight_Aim_L",
             "from": 0,
             "to": 0.03333333507180214,
-            "wrapMode": 2
+            "wrapMode": 2,
+            "previousId": "5b7e2"
           }
         ]
       }
@@ -559,7 +574,27 @@
     },
     "fbx": {
       "preferLocalTimeSpan": false,
-      "smartMaterialEnabled": false
+      "smartMaterialEnabled": false,
+      "matchMeshNames": false
+    },
+    "mountAllAnimationsOnPrefab": true,
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
     }
   }
 }

@@ -11,19 +11,19 @@
     ],
     "_variables": {
       "Speed": {
-        "__id__": 84
+        "__id__": 78
       },
       "Attack": {
-        "__id__": 85
+        "__id__": 79
       },
       "Combating": {
-        "__id__": 86
+        "__id__": 80
       },
       "Hit": {
-        "__id__": 87
+        "__id__": 81
       },
       "ProvocativelyAttack": {
-        "__id__": 88
+        "__id__": 82
       }
     }
   },
@@ -80,43 +80,43 @@
         "__id__": 39
       },
       {
-        "__id__": 43
+        "__id__": 42
       },
       {
-        "__id__": 49
+        "__id__": 47
       },
       {
-        "__id__": 52
+        "__id__": 50
       },
       {
-        "__id__": 55
+        "__id__": 53
       },
       {
-        "__id__": 59
+        "__id__": 56
       },
       {
-        "__id__": 65
+        "__id__": 61
+      },
+      {
+        "__id__": 63
+      },
+      {
+        "__id__": 64
       },
       {
         "__id__": 67
       },
       {
-        "__id__": 68
+        "__id__": 70
       },
       {
         "__id__": 72
       },
       {
+        "__id__": 74
+      },
+      {
         "__id__": 76
-      },
-      {
-        "__id__": 78
-      },
-      {
-        "__id__": 80
-      },
-      {
-        "__id__": 82
       }
     ],
     "_entryState": {
@@ -558,22 +558,16 @@
   {
     "__type__": "cc.animation.BinaryCondition",
     "operator": 4,
-    "lhs": {
+    "lhs": 0,
+    "lhsBinding": {
       "__id__": 41
     },
-    "rhs": {
-      "__id__": 42
-    }
+    "rhs": 0
   },
   {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "Speed",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 0
+    "__type__": "cc.animation.TCVariableBinding",
+    "type": 0,
+    "variableName": "Speed"
   },
   {
     "__type__": "cc.animation.AnimationTransition",
@@ -585,10 +579,10 @@
     },
     "conditions": [
       {
-        "__id__": 44
+        "__id__": 43
       },
       {
-        "__id__": 47
+        "__id__": 45
       }
     ],
     "duration": 0,
@@ -599,28 +593,22 @@
   {
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
-    "lhs": {
-      "__id__": 45
+    "lhs": 0,
+    "lhsBinding": {
+      "__id__": 44
     },
-    "rhs": {
-      "__id__": 46
-    }
+    "rhs": 0
   },
   {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "Speed",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 0
+    "__type__": "cc.animation.TCVariableBinding",
+    "type": 0,
+    "variableName": "Speed"
   },
   {
     "__type__": "cc.animation.UnaryCondition",
     "operator": 1,
     "operand": {
-      "__id__": 48
+      "__id__": 46
     }
   },
   {
@@ -638,7 +626,7 @@
     },
     "conditions": [
       {
-        "__id__": 50
+        "__id__": 48
       }
     ],
     "duration": 0.2,
@@ -650,7 +638,7 @@
     "__type__": "cc.animation.UnaryCondition",
     "operator": 0,
     "operand": {
-      "__id__": 51
+      "__id__": 49
     }
   },
   {
@@ -668,7 +656,7 @@
     },
     "conditions": [
       {
-        "__id__": 53
+        "__id__": 51
       }
     ],
     "duration": 0.2,
@@ -680,7 +668,7 @@
     "__type__": "cc.animation.UnaryCondition",
     "operator": 1,
     "operand": {
-      "__id__": 54
+      "__id__": 52
     }
   },
   {
@@ -698,7 +686,7 @@
     },
     "conditions": [
       {
-        "__id__": 56
+        "__id__": 54
       }
     ],
     "duration": 0.2,
@@ -709,22 +697,16 @@
   {
     "__type__": "cc.animation.BinaryCondition",
     "operator": 1,
-    "lhs": {
-      "__id__": 57
+    "lhs": 0,
+    "lhsBinding": {
+      "__id__": 55
     },
-    "rhs": {
-      "__id__": 58
-    }
+    "rhs": 0
   },
   {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "Speed",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 0
+    "__type__": "cc.animation.TCVariableBinding",
+    "type": 0,
+    "variableName": "Speed"
   },
   {
     "__type__": "cc.animation.AnimationTransition",
@@ -736,10 +718,10 @@
     },
     "conditions": [
       {
-        "__id__": 60
+        "__id__": 57
       },
       {
-        "__id__": 63
+        "__id__": 59
       }
     ],
     "duration": 0.3,
@@ -750,28 +732,22 @@
   {
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
-    "lhs": {
-      "__id__": 61
+    "lhs": 0,
+    "lhsBinding": {
+      "__id__": 58
     },
-    "rhs": {
-      "__id__": 62
-    }
+    "rhs": 0
   },
   {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "Speed",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 0
+    "__type__": "cc.animation.TCVariableBinding",
+    "type": 0,
+    "variableName": "Speed"
   },
   {
     "__type__": "cc.animation.UnaryCondition",
     "operator": 0,
     "operand": {
-      "__id__": 64
+      "__id__": 60
     }
   },
   {
@@ -789,7 +765,7 @@
     },
     "conditions": [
       {
-        "__id__": 66
+        "__id__": 62
       }
     ],
     "duration": 0.2,
@@ -825,29 +801,23 @@
     },
     "conditions": [
       {
-        "__id__": 69
+        "__id__": 65
       }
     ]
   },
   {
     "__type__": "cc.animation.BinaryCondition",
     "operator": 1,
-    "lhs": {
-      "__id__": 70
+    "lhs": 0,
+    "lhsBinding": {
+      "__id__": 66
     },
-    "rhs": {
-      "__id__": 71
-    }
+    "rhs": 0
   },
   {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "Speed",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 0
+    "__type__": "cc.animation.TCVariableBinding",
+    "type": 0,
+    "variableName": "Speed"
   },
   {
     "__type__": "cc.animation.Transition",
@@ -859,29 +829,23 @@
     },
     "conditions": [
       {
-        "__id__": 73
+        "__id__": 68
       }
     ]
   },
   {
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
-    "lhs": {
-      "__id__": 74
+    "lhs": 0,
+    "lhsBinding": {
+      "__id__": 69
     },
-    "rhs": {
-      "__id__": 75
-    }
+    "rhs": 0
   },
   {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "Speed",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 0
+    "__type__": "cc.animation.TCVariableBinding",
+    "type": 0,
+    "variableName": "Speed"
   },
   {
     "__type__": "cc.animation.AnimationTransition",
@@ -893,7 +857,7 @@
     },
     "conditions": [
       {
-        "__id__": 77
+        "__id__": 71
       }
     ],
     "duration": 0.2,
@@ -915,7 +879,7 @@
     },
     "conditions": [
       {
-        "__id__": 79
+        "__id__": 73
       }
     ],
     "duration": 0.2,
@@ -937,7 +901,7 @@
     },
     "conditions": [
       {
-        "__id__": 81
+        "__id__": 75
       }
     ],
     "duration": 0.2,
@@ -959,7 +923,7 @@
     },
     "conditions": [
       {
-        "__id__": 83
+        "__id__": 77
       }
     ],
     "duration": 0.2,

@@ -1,5 +1,5 @@
 {
-  "ver": "2.3.2",
+  "ver": "2.3.8",
   "importer": "fbx",
   "imported": true,
   "uuid": "1f445a92-65e8-4092-82b9-0e505dbb4e4d",
@@ -39,7 +39,7 @@
       "userData": {
         "gltfIndex": 0
       },
-      "ver": "1.0.12",
+      "ver": "1.0.13",
       "imported": true,
       "files": [
         ".json"
@@ -50,7 +50,8 @@
   "userData": {
     "imageMetas": [],
     "fbx": {
-      "smartMaterialEnabled": true
+      "smartMaterialEnabled": true,
+      "matchMeshNames": false
     },
     "animationImportSettings": [
       {
@@ -62,7 +63,8 @@
             "name": "Ninja Idle",
             "from": 0,
             "to": 3.3333332538604736,
-            "wrapMode": 2
+            "wrapMode": 2,
+            "previousId": "c89bd"
           }
         ]
       }
@@ -75,6 +77,25 @@
       "materials": [],
       "scenes": [
         "1f445a92-65e8-4092-82b9-0e505dbb4e4d@b6823"
+      ]
+    },
+    "mountAllAnimationsOnPrefab": true,
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
       ]
     }
   }

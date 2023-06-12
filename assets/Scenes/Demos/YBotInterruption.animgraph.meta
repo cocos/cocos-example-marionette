@@ -1,1 +1,11 @@
-{"ver":"1.1.0","importer":"animation-graph","imported":true,"uuid":"ef64c921-1f73-42a2-9b4f-01387be3fd55","files":[".json"],"subMetas":{},"userData":{}}
+{
+  "ver": "1.2.0",
+  "importer": "animation-graph",
+  "imported": true,
+  "uuid": "ef64c921-1f73-42a2-9b4f-01387be3fd55",
+  "files": [
+    ".json"
+  ],
+  "subMetas": {},
+  "userData": {}
+}

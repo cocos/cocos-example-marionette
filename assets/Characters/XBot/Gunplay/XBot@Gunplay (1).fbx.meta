@@ -1,5 +1,5 @@
 {
-  "ver": "2.3.2",
+  "ver": "2.3.8",
   "importer": "fbx",
   "imported": true,
   "uuid": "0fb87e81-0bbf-4dd0-9eba-2f9daf5695a3",
@@ -39,7 +39,7 @@
       "userData": {
         "gltfIndex": 0
       },
-      "ver": "1.0.12",
+      "ver": "1.0.13",
       "imported": true,
       "files": [
         ".json"
@@ -52,7 +52,8 @@
     "legacyFbxImporter": false,
     "allowMeshDataAccess": true,
     "fbx": {
-      "smartMaterialEnabled": true
+      "smartMaterialEnabled": true,
+      "matchMeshNames": false
     },
     "animationImportSettings": [
       {
@@ -64,7 +65,8 @@
             "name": "Gunplay (1)",
             "from": 0,
             "to": 0.5666666626930237,
-            "wrapMode": 2
+            "wrapMode": 2,
+            "previousId": "0b771"
           }
         ]
       }
@@ -77,6 +79,25 @@
       "materials": [],
       "scenes": [
         "0fb87e81-0bbf-4dd0-9eba-2f9daf5695a3@0302f"
+      ]
+    },
+    "mountAllAnimationsOnPrefab": true,
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
       ]
     }
   }

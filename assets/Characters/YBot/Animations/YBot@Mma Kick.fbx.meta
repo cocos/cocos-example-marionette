@@ -1,5 +1,5 @@
 {
-  "ver": "2.3.2",
+  "ver": "2.3.8",
   "importer": "fbx",
   "imported": true,
   "uuid": "b7532ad2-eb33-4a54-8780-137f8ab44dab",
@@ -39,7 +39,7 @@
       "userData": {
         "gltfIndex": 0
       },
-      "ver": "1.0.12",
+      "ver": "1.0.13",
       "imported": true,
       "files": [
         ".json"
@@ -52,7 +52,8 @@
     "legacyFbxImporter": false,
     "allowMeshDataAccess": true,
     "fbx": {
-      "smartMaterialEnabled": true
+      "smartMaterialEnabled": true,
+      "matchMeshNames": false
     },
     "animationImportSettings": [
       {
@@ -64,7 +65,8 @@
             "name": "Mma Kick",
             "from": 0,
             "to": 1.6666666269302368,
-            "wrapMode": 1
+            "wrapMode": 1,
+            "previousId": "bbeb9"
           }
         ]
       }
@@ -77,6 +79,25 @@
       "materials": [],
       "scenes": [
         "b7532ad2-eb33-4a54-8780-137f8ab44dab@095f7"
+      ]
+    },
+    "mountAllAnimationsOnPrefab": true,
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
       ]
     }
   }

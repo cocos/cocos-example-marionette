@@ -11,7 +11,7 @@
     ],
     "_variables": {
       "Speed": {
-        "__id__": 19
+        "__id__": 17
       }
     }
   },
@@ -63,7 +63,7 @@
         "__id__": 11
       },
       {
-        "__id__": 15
+        "__id__": 14
       }
     ],
     "_entryState": {
@@ -219,22 +219,16 @@
   {
     "__type__": "cc.animation.BinaryCondition",
     "operator": 1,
-    "lhs": {
+    "lhs": 0,
+    "lhsBinding": {
       "__id__": 13
     },
-    "rhs": {
-      "__id__": 14
-    }
+    "rhs": 0
   },
   {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "Speed",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 0
+    "__type__": "cc.animation.TCVariableBinding",
+    "type": 0,
+    "variableName": "Speed"
   },
   {
     "__type__": "cc.animation.AnimationTransition",
@@ -253,7 +247,7 @@
     },
     "conditions": [
       {
-        "__id__": 16
+        "__id__": 15
       }
     ],
     "duration": 0.3,
@@ -267,22 +261,16 @@
   {
     "__type__": "cc.animation.BinaryCondition",
     "operator": 0,
-    "lhs": {
-      "__id__": 17
+    "lhs": 0,
+    "lhsBinding": {
+      "__id__": 16
     },
-    "rhs": {
-      "__id__": 18
-    }
+    "rhs": 0
   },
   {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "Speed",
-    "value": 0
-  },
-  {
-    "__type__": "cc.animation.BindableNumber",
-    "variable": "",
-    "value": 0
+    "__type__": "cc.animation.TCVariableBinding",
+    "type": 0,
+    "variableName": "Speed"
   },
   {
     "__type__": "cc.animation.PlainVariable",
