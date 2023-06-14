@@ -7,6 +7,7 @@
       "animation",
       "audio",
       "base",
+      "geometry-renderer",
       "gfx-webgl",
       "gfx-webgl2",
       "light-probe",
@@ -14,6 +15,7 @@
       "particle",
       "physics-physx",
       "primitive",
+      "procedural-animation",
       "profiler",
       "skeletal-animation",
       "terrain",
@@ -41,6 +43,12 @@
       "gfx-webgl2": {
         "_value": true
       },
+      "animation": {
+        "_value": true
+      },
+      "skeletal-animation": {
+        "_value": true
+      },
       "3d": {
         "_value": true
       },
@@ -49,6 +57,9 @@
         "flags": {
           "UI_GPU_DRIVEN": true
         }
+      },
+      "xr": {
+        "_value": false
       },
       "ui": {
         "_value": true
@@ -91,6 +102,15 @@
       "profiler": {
         "_value": true
       },
+      "occlusion-query": {
+        "_value": false
+      },
+      "geometry-renderer": {
+        "_value": true
+      },
+      "debug-renderer": {
+        "_value": false
+      },
       "particle-2d": {
         "_value": false
       },
@@ -106,7 +126,16 @@
       "tween": {
         "_value": true
       },
+      "websocket": {
+        "_value": true
+      },
+      "websocket-server": {
+        "_value": false
+      },
       "terrain": {
+        "_value": true
+      },
+      "light-probe": {
         "_value": true
       },
       "tiled-map": {
@@ -121,11 +150,11 @@
       "marionette": {
         "_value": true
       },
-      "animation": {
+      "procedural-animation": {
         "_value": true
       },
-      "skeletal-animation": {
-        "_value": true
+      "custom-pipeline": {
+        "_value": false
       }
     },
     "noDeprecatedFeatures": {

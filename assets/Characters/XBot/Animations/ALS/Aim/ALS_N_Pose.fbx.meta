@@ -1,0 +1,100 @@
+{
+  "ver": "2.3.8",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "bc99dcb3-56df-4433-954a-c12b66d0e980",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "083c5": {
+      "importer": "gltf-animation",
+      "uuid": "bc99dcb3-56df-4433-954a-c12b66d0e980@083c5",
+      "displayName": "",
+      "id": "083c5",
+      "name": "ALS_N_Pose.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.03333333507180214
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "1eed0": {
+      "importer": "gltf-scene",
+      "uuid": "bc99dcb3-56df-4433-954a-c12b66d0e980@1eed0",
+      "displayName": "",
+      "id": "1eed0",
+      "name": "ALS_N_Pose.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.13",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "animationImportSettings": [
+      {
+        "name": "Unreal Take",
+        "duration": 0.03333333507180214,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "ALS_N_Pose",
+            "from": 0,
+            "to": 0.03333333507180214,
+            "wrapMode": 2,
+            "previousId": "083c5"
+          }
+        ]
+      }
+    ],
+    "redirect": "bc99dcb3-56df-4433-954a-c12b66d0e980@1eed0",
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "bc99dcb3-56df-4433-954a-c12b66d0e980@1eed0"
+      ]
+    }
+  }
+}
