@@ -1,0 +1,108 @@
+{
+  "ver": "2.3.8",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "1cd61e5b-c0c7-484f-a236-7dc3db3b34fd",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "083c5": {
+      "importer": "gltf-animation",
+      "uuid": "1cd61e5b-c0c7-484f-a236-7dc3db3b34fd@083c5",
+      "displayName": "",
+      "id": "083c5",
+      "name": "ALS_N_Look_F_Sweep.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1
+        },
+        "events": [],
+        "additive": {
+          "enabled": true,
+          "refClip": "bc99dcb3-56df-4433-954a-c12b66d0e980@083c5"
+        }
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "ddc51": {
+      "importer": "gltf-scene",
+      "uuid": "1cd61e5b-c0c7-484f-a236-7dc3db3b34fd@ddc51",
+      "displayName": "",
+      "id": "ddc51",
+      "name": "ALS_N_Look_F_Sweep.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.13",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "animationImportSettings": [
+      {
+        "name": "Unreal Take",
+        "duration": 1,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "ALS_N_Look_F_Sweep",
+            "from": 0,
+            "to": 1,
+            "wrapMode": 2,
+            "previousId": "083c5",
+            "additive": {
+              "enabled": true,
+              "refClip": "bc99dcb3-56df-4433-954a-c12b66d0e980@083c5"
+            }
+          }
+        ]
+      }
+    ],
+    "redirect": "1cd61e5b-c0c7-484f-a236-7dc3db3b34fd@ddc51",
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "1cd61e5b-c0c7-484f-a236-7dc3db3b34fd@ddc51"
+      ]
+    }
+  }
+}
