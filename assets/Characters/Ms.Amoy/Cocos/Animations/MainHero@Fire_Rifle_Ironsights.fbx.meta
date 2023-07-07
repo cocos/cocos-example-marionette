@@ -94,7 +94,11 @@
           "from": 0,
           "to": 0.23333333432674408
         },
-        "events": []
+        "events": [],
+        "additive": {
+          "enabled": true,
+          "refClip": "502d5f4a-ecfb-46a7-97b1-988c9ed9771a@5571d"
+        }
       },
       "ver": "1.0.17",
       "imported": true,
@@ -535,7 +539,11 @@
             "from": 0,
             "to": 0.23333333432674408,
             "wrapMode": 2,
-            "previousId": "2b872"
+            "previousId": "2b872",
+            "additive": {
+              "enabled": true,
+              "refClip": "502d5f4a-ecfb-46a7-97b1-988c9ed9771a@5571d"
+            }
           }
         ]
       }

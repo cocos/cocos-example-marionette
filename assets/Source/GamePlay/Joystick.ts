@@ -49,8 +49,8 @@ export class Joystick extends cc.Eventify(cc.Component) {
 
         if (useMouseInput()) {
             this.node.on(cc.Node.EventType.MOUSE_DOWN, this._onMouseDown, this);
-            //this.node.on(cc.Node.EventType.MOUSE_MOVE, this._onMouseMove, this);
-            // this.node.on(cc.Node.EventType.MOUSE_UP, this._onMouseUp, this);
+            this.node.on(cc.Node.EventType.MOUSE_MOVE, this._onMouseMove, this);
+            this.node.on(cc.Node.EventType.MOUSE_UP, this._onMouseUp, this);
             cc.input.on(cc.Input.EventType.MOUSE_MOVE, (eventMouse) => {
                 this._onClickOrTouchMove(eventMouse.getDelta());
             });

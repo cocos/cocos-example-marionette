@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, animation, math, input, Input, Touch, EventTouch, EventMouse, sys, Prefab, instantiate, RigidBody, PhysicsSystem, RecyclePool, physics, geometry, director, Vec3, EventKeyboard, KeyCode, Vec2 } from 'cc';
+import { _decorator, Component, Node, animation, math, input, Input, Touch, EventTouch, EventMouse, sys, Prefab, instantiate, RigidBody, PhysicsSystem, RecyclePool, physics, geometry, director, Vec3, EventKeyboard, KeyCode, Vec2, find, Quat, toDegree, NodeSpace, toRadian } from 'cc';
 import { Damageable } from '../GamePlay/Damage/Damagable';
 import { Damage } from '../GamePlay/Damage/Damage';
 import { Joystick, JoystickEventType } from '../GamePlay/Joystick';
@@ -20,6 +20,9 @@ export class MsAmoyController extends Component {
 
     @_decorator.property
     public mouseTurnSpeed = 1.0;
+
+    @_decorator.property({ unit: '°/s' })
+    public moveTurnSpeed = 270;
 
     @_decorator.property(Node)
     public input: Node | null = null;
@@ -96,15 +99,16 @@ export class MsAmoyController extends Component {
             }
         }
 
+        const movementInput = this._fetchMovementInput();
+        const shouldMove = !Vec3.equals(movementInput, Vec3.ZERO, 1e-2);
+        this._animationController.setValue('ShouldMove', shouldMove);
         if (this._canMove()) {
-            this._applyInputVelocity();
-            if (this._hasUnprocessedMoveRequest) {
-                console.log(`Apply movement`);
-                this._hasUnprocessedMoveRequest = false;
-                this._applyJoystickDirection();
+            if (!Vec3.equals(movementInput, Vec3.ZERO)) {
+                this._faceView(deltaTime);
             }
+
+            this._applyInput(movementInput);
             const velocity2D = new math.Vec2(localVelocity.x, localVelocity.z);
-            // cc.math.Vec2.normalize(velocity2D, velocity2D);
             this._animationController.setValue('VelocityX', -velocity2D.x);
             this._animationController.setValue('VelocityY', velocity2D.y);
         }
@@ -221,34 +225,67 @@ export class MsAmoyController extends Component {
     );
 
     private _canMove() {
-        return !this._isFiring && !this._isReactingToHit && this._moveLockerCount === 0;
+        return !this._isReactingToHit && this._moveLockerCount === 0;
     }
 
     private _canFire() {
-        return !this._isFiring && !this._isCrouching;
+        return !this._isFiring;
     }
 
-    private _applyJoystickDirection() {
-        const { joyStick: { direction: joystickDirection } } = this;
-        const baseSpeed = this._ironSights ? 1.0 : 2.0;
-        const velocity = new math.Vec3(-joystickDirection.x, 0.0, joystickDirection.y);
-        math.Vec3.normalize(velocity, velocity);
-        math.Vec3.multiplyScalar(velocity, velocity, baseSpeed);
-        this._charStatus.localVelocity = velocity;
-    }
-
-    private _applyInputVelocity() {
-        const inputVelocity = new Vec2(
-            globalInputManager.getAxisValue(PredefinedAxisId.MoveRight),
-            globalInputManager.getAxisValue(PredefinedAxisId.MoveForward),
+    private _fetchMovementInput() {
+        const joystickDirection = this.joyStick.direction;
+        const inputDirX = globalInputManager.getAxisValue(PredefinedAxisId.MoveRight);
+        const inputDirY = globalInputManager.getAxisValue(PredefinedAxisId.MoveForward);
+        const input = new Vec3(
+            -(joystickDirection.x + inputDirX),
+            0.0,
+            joystickDirection.y + inputDirY,
         );
+        Vec3.normalize(input, input);
+        return input;
+    }
 
+    private _applyInput(movementInput: Readonly<Vec3>) {
+        const inputVector = new Vec3(movementInput);
         const baseSpeed = this._ironSights ? 1.0 : 2.0;
+        math.Vec3.normalize(inputVector, inputVector);
+        math.Vec3.multiplyScalar(inputVector, inputVector, baseSpeed);
 
-        const velocity = new math.Vec3(-inputVelocity.x, 0.0, inputVelocity.y);
-        math.Vec3.normalize(velocity, velocity);
-        math.Vec3.multiplyScalar(velocity, velocity, baseSpeed);
-        this._charStatus.localVelocity = velocity;
+        const viewDir = this._getViewDirection(new Vec3());
+        viewDir.y = 0.0;
+        Vec3.normalize(viewDir, viewDir);
+
+        const q = Quat.rotationTo(new Quat(), Vec3.UNIT_Z, viewDir);
+        Vec3.transformQuat(inputVector, inputVector, q);
+
+        this._charStatus.velocity = inputVector;
+    }
+
+    private _faceView(deltaTime: number) {
+        const viewDir = this._getViewDirection(new Vec3());
+        viewDir.y = 0.0;
+        viewDir.normalize();
+
+        const characterDir = getForward(this.node);
+        characterDir.y = 0.0;
+        characterDir.normalize();
+
+        const currentAimAngle = signedAngleVec3(characterDir, viewDir, Vec3.UNIT_Y);
+        const currentAimAngleDegMag = toDegree(Math.abs(currentAimAngle));
+        
+        const maxRotDegMag = this.moveTurnSpeed * deltaTime;
+        const rotDegMag = Math.min(maxRotDegMag, currentAimAngleDegMag);
+        const q = Quat.fromAxisAngle(new Quat(), Vec3.UNIT_Y, Math.sign(currentAimAngle) * toRadian(rotDegMag));
+        this.node.rotate(q, NodeSpace.WORLD);
+    }
+
+    private _getViewDirection(out: Vec3) {
+        const mainCamera = find('Main Camera');
+        if (!mainCamera) {
+            return Vec3.set(out, 0, 0, -1);
+        } else {
+            return Vec3.negate(out, getForward(mainCamera));
+        }
     }
 
     private _onMouseDown (event: EventMouse) {
@@ -316,8 +353,6 @@ export class MsAmoyController extends Component {
     private _onHitReactionTimeElapsed() {
         this._isReactingToHit = false;
 
-        this._applyJoystickDirection();
-
         const scheduler = director.getScheduler();
         scheduler.unschedule(this._onHitReactionTimeElapsed, this);
     }
@@ -341,8 +376,6 @@ export class MsAmoyController extends Component {
             gun,
             _rayCastResultPool: pool,
         } = this;
-
-        this._charStatus.velocity = Vec3.ZERO;
 
         this._animationController.setValue('Fire', true);
 
@@ -403,4 +436,11 @@ export class MsAmoyController extends Component {
         this._charStatus.setVelocityImmediate(Vec3.ZERO);
         this._hasUnprocessedMoveRequest = true;
     }
+}
+
+function signedAngleVec3(a: Readonly<Vec3>, b: Readonly<Vec3>, normal: Readonly<Vec3>) {
+    const angle = Vec3.angle(a, b);
+    const cross = Vec3.cross(new Vec3(), a, b);
+    cross.normalize();
+    return Vec3.dot(cross, normal) < 0 ? -angle : angle;
 }
