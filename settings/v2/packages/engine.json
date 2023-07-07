@@ -26,9 +26,6 @@
       "webview"
     ],
     "flags": {
-      "2d": {
-        "UI_GPU_DRIVEN": true
-      }
     },
     "cache": {
       "base": {
@@ -53,10 +50,7 @@
         "_value": true
       },
       "2d": {
-        "_value": true,
-        "flags": {
-          "UI_GPU_DRIVEN": true
-        }
+        "_value": true
       },
       "xr": {
         "_value": false
