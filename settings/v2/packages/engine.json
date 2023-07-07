@@ -25,8 +25,7 @@
       "websocket",
       "webview"
     ],
-    "flags": {
-    },
+    "flags": {},
     "cache": {
       "base": {
         "_value": true
