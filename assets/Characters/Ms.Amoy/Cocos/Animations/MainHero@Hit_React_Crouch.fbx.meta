@@ -48,7 +48,7 @@
       "name": "Hit_React_Crouch.animation",
       "userData": {
         "gltfIndex": 0,
-        "wrapMode": 2,
+        "wrapMode": 1,
         "sample": 30,
         "span": {
           "from": 0,
@@ -491,7 +491,7 @@
             "name": "Hit_React_Crouch",
             "from": 0,
             "to": 0.9666666388511658,
-            "wrapMode": 2,
+            "wrapMode": 1,
             "previousId": "84928"
           }
         ]
